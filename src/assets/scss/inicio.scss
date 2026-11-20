@@ -1,14 +1,11 @@
 @use "./resources/config" as c;
 @use "./resources/global";
 
-@use "./resources/header01";
-@use "./resources/art14";
-@use "./resources/art13";
-@use "./resources/artForm02";
-@use "./resources/moduloLoader01";
-
-.art14 {
-    @media only screen and (min-width: c.$desktop) {
-        width: 60%;
-    }
-}
+@use "./resources/headerLordSlider";
+@use "./resources/sectLordManifiesto";
+@use "./resources/sectLordCarta";
+@use "./resources/artLordBurger";
+@use "./resources/sectLordExtras";
+@use "./resources/sectLordParada";
+@use "./resources/sectLordOpiniones";
+@use "./resources/sectLordFaq";

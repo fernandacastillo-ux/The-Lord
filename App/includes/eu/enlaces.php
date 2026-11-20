@@ -1,78 +1,24 @@
 <?php
-// Nabigazioan eta footerrean berrerabiltzen den euskarazko esteka-zerrenda.
-// Href bakoitza App/config/config.php fitxategiko bide batekin bat dator.
+// Nabigazioak eta oinak partekatzen duten zerrenda euskaraz.
+// href bakoitza App/config/config.php fitxategiko ibilbide batekin bat dator.
+$rutaActual = $url ?? "";
 ?>
-<ul class="enlaces01">
-    <li class="enlaces01__item">
-        <a class="enlaces01__link" href="<?= url("/eu") ?>" title="Lorem ipsum">
-            <img class="enlaces01__icon" src="<?= asset("assets/img/icons/home.svg") ?>" alt="" title="" aria-hidden="true" />
-            <span>Hasiera</span>
-        </a>
+<ul class="enlacesLord">
+    <li>
+        <a class="enlacesLord__link" href="<?= url("/eu") ?>" title="THE LORDen hasierara joan"<?= $rutaActual === "/eu" ? ' aria-current="page"' : "" ?>>Hasiera</a>
     </li>
-
-    <li class="enlaces01__item">
-        <a class="enlaces01__link" href="<?= url("/eu/contacto") ?>" title="Lorem ipsum">
-            <img class="enlaces01__icon" src="<?= asset("assets/img/icons/email.svg") ?>" alt="" title="" aria-hidden="true" />
-            <span>Kontaktua</span>
-        </a>
+    <li>
+        <a class="enlacesLord__link" href="<?= url("/eu/hanburgesak") ?>" title="Hanburgesen karta ikusi"<?= $rutaActual === "/eu/hanburgesak" ? ' aria-current="page"' : "" ?>>Hanburgesak</a>
     </li>
-
-    <li class="enlaces01__item">
-        <a class="enlaces01__link" href="<?= url("/eu/quienessomos") ?>" title="Lorem ipsum">
-            <img class="enlaces01__icon" src="<?= asset("assets/img/icons/persons.svg") ?>" alt="" title="" aria-hidden="true" />
-            <span>Nortzuk gara</span>
-        </a>
+    <li>
+        <a class="enlacesLord__link" href="<?= url("/eu/nor-gara") ?>" title="THE LORDen historia ezagutu"<?= $rutaActual === "/eu/nor-gara" ? ' aria-current="page"' : "" ?>>Nor gara</a>
     </li>
-
-    <li class="enlaces01__item">
-        <a class="enlaces01__link" href="<?= url("/eu/preguntas-frecuentes") ?>" title="Lorem ipsum">
-            <img class="enlaces01__icon" src="<?= asset("assets/img/icons/persons.svg") ?>" alt="" title="" aria-hidden="true" />
-            <span>FAQ</span>
-        </a>
+    <li>
+        <a class="enlacesLord__link" href="<?= url("/eu/gure-ibilbidea") ?>" title="Foodtruckaren hurrengo geldialdiak kontsultatu"<?= $rutaActual === "/eu/gure-ibilbidea" ? ' aria-current="page"' : "" ?>>Gure ibilbidea</a>
     </li>
-
-    <li class="enlaces01__item enlaces01__item--hasSubmenu" data-nav01-submenu-item>
-        <div class="enlaces01__submenuHeader">
-            <a class="enlaces01__link enlaces01__link--parent" href="<?= url("/eu/servicios") ?>" title="Lorem ipsum">
-                <img class="enlaces01__icon" src="<?= asset("assets/img/icons/grid.svg") ?>" alt="" title="" aria-hidden="true" />
-                <span>Zerbitzuak</span>
-            </a>
-            <button
-                class="enlaces01__submenuToggle"
-                type="button"
-                aria-controls="<?= e($idSubmenu) ?>"
-                aria-expanded="false"
-                aria-label="Zerbitzuen azpimenua ireki"
-                title="Lorem ipsum"
-                data-nav01-submenu-toggle
-                data-nav01-label-open="Azpimenua ireki"
-                data-nav01-label-close="Azpimenua itxi"
-                data-nav01-submenu-label="Zerbitzuak"
-            >
-                <img class="enlaces01__chevron" src="<?= asset("assets/img/icons/arrow-down.svg") ?>" alt="" title="" aria-hidden="true" />
-            </button>
-        </div>
-
-        <ul class="enlaces01__submenu" id="<?= e($idSubmenu) ?>" data-nav01-submenu>
-            <li class="enlaces01__item">
-                <a class="enlaces01__link enlaces01__link--child" href="<?= url("/eu/servicio1") ?>" title="Lorem ipsum">
-                    <img class="enlaces01__icon" src="<?= asset("assets/img/icons/grid.svg") ?>" alt="" title="" aria-hidden="true" />
-                    <span>1. zerbitzua</span>
-                </a>
-            </li>
-            <li class="enlaces01__item">
-                <a class="enlaces01__link enlaces01__link--child" href="<?= url("/eu/servicio2") ?>" title="Lorem ipsum">
-                    <img class="enlaces01__icon" src="<?= asset("assets/img/icons/boxes.svg") ?>" alt="" title="" aria-hidden="true" />
-                    <span>2. zerbitzua</span>
-                </a>
-            </li>
-        </ul>
-    </li>
-
-    <li class="enlaces01__item">
-        <a class="enlaces01__link" href="<?= url("/showroom") ?>" title="Lorem ipsum">
-            <img class="enlaces01__icon" src="<?= asset("assets/img/icons/grid.svg") ?>" alt="" title="" aria-hidden="true" />
-            <span>Showroom</span>
+    <li>
+        <a class="enlacesLord__link enlacesLord__link--cta" href="<?= url("/eu/harremanetan") ?>" title="THE LORDekin harremanetan jarri"<?= $rutaActual === "/eu/harremanetan" ? ' aria-current="page"' : "" ?>>
+            Harremanetan <span class="lordFlecha" aria-hidden="true"></span>
         </a>
     </li>
 </ul>

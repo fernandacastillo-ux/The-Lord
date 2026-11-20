@@ -7,26 +7,23 @@ return [
         "/showroom" => ["view" => "showroom.php", "resources" => "src/assets/js/showroom.js"],
     ],
     "post_routes" => ["/app/artForm02" => "app/artForm02.php"],
+    // Las rutas equivalentes ocupan la misma posición en cada idioma: el selector de idioma depende de ello.
     "routes" => [
         "es" => [
             "/es" => ["view" => "inicio.php", "resources" => "src/assets/js/inicio.js"],
+            "/es/hamburguesas" => ["view" => "hamburguesas.php", "resources" => "src/assets/js/hamburguesas.js"],
             "/es/quienes-somos" => ["view" => "quienessomos.php", "resources" => "src/assets/js/quienessomos.js"],
+            "/es/nuestra-ruta" => ["view" => "ruta.php", "resources" => "src/assets/js/ruta.js"],
             "/es/contacto" => ["view" => "contacto.php", "resources" => "src/assets/js/contacto.js"],
-            "/es/servicios" => ["view" => "servicios.php", "resources" => "src/assets/js/servicios.js"],
-            "/es/servicios/servicio1" => ["view" => "servicio1.php", "resources" => "src/assets/js/servicio1.js"],
-            "/es/servicios/servicio2" => ["view" => "servicio2.php", "resources" => "src/assets/js/servicio2.js"],
             "/es/404" => ["view" => "404.php", "resources" => "src/assets/js/404.js"],
-            "/es/preguntas-frecuentes" => ["view" => "faq.php", "resources" => "src/assets/js/faq.js"]
         ],
         "eu" => [
             "/eu" => ["view" => "inicio.php", "resources" => "src/assets/js/inicio.js"],
-            "/eu/quienessomos" => ["view" => "quienessomos.php", "resources" => "src/assets/js/quienessomos.js"],
-            "/eu/contacto" => ["view" => "contacto.php", "resources" => "src/assets/js/contacto.js"],
-            "/eu/servicios" => ["view" => "servicios.php", "resources" => "src/assets/js/servicios.js"],
-            "/eu/servicios/servicio1" => ["view" => "servicio1.php", "resources" => "src/assets/js/servicio1.js"],
-            "/eu/servicios/servicio2" => ["view" => "servicio2.php", "resources" => "src/assets/js/servicio2.js"],
+            "/eu/hanburgesak" => ["view" => "hamburguesas.php", "resources" => "src/assets/js/hamburguesas.js"],
+            "/eu/nor-gara" => ["view" => "quienessomos.php", "resources" => "src/assets/js/quienessomos.js"],
+            "/eu/gure-ibilbidea" => ["view" => "ruta.php", "resources" => "src/assets/js/ruta.js"],
+            "/eu/harremanetan" => ["view" => "contacto.php", "resources" => "src/assets/js/contacto.js"],
             "/eu/404" => ["view" => "404.php", "resources" => "src/assets/js/404.js"],
-            "/eu/preguntas-frecuentes" => ["view" => "faq.php", "resources" => "src/assets/js/faq.js"]
         ],
     ],
 ];

@@ -6,8 +6,14 @@ import "./resources/_artForm02.js";
 import artSlider from "./resources/_artSlider.js";
 
 import { artAcordeon01 } from "./resources/_artAcordeon01.js";
+import { lordCarrusel } from "./resources/_lordCarrusel.js";
+import { headerLordGrill } from "./resources/_headerLordGrill.js";
+import { sectLordFaq } from "./resources/_sectLordFaq.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     artAcordeon01();
     artSlider();
+    lordCarrusel();
+    headerLordGrill();
+    sectLordFaq();
 });

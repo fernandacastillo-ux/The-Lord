@@ -1,0 +1,62 @@
+@use "config" as c;
+
+// Sección clara con cabecera (título + texto/enlace) y rejilla de artLordBurger.
+// Variante --completa: rejilla de dos columnas para la carta con tarjetas detalladas.
+.sectLordCarta {
+    @include c.lordContenedor(85px);
+    display: block;
+    background: c.$lordPergamino;
+    color: c.$lordTinta;
+    scroll-margin-top: 90px;
+
+    @media only screen and (min-width: c.$lordMovil) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    &__cabecera {
+        display: flex;
+        margin-bottom: 38px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+
+        @media only screen and (min-width: c.$lordMovil) {
+            margin-bottom: 55px;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 40px;
+        }
+    }
+
+    &__intro {
+        max-width: 390px;
+
+        p {
+            color: #5e594f;
+            line-height: 1.65;
+        }
+    }
+
+    &__enlace {
+        margin-top: 18px;
+        color: c.$lordOxido;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 22px;
+
+        @media only screen and (min-width: c.$lordTablet) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &--completa &__grid {
+        @media only screen and (min-width: c.$lordTablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

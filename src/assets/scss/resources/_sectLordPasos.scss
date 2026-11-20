@@ -1,0 +1,96 @@
+@use "config" as c;
+
+// Sección con introducción y artículos numerados.
+// Base: rejilla 2x2 con bordes (método). Variante --valores: tres columnas con línea lateral.
+.sectLordPasos {
+    display: grid;
+    max-width: c.$lordAncho;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 85px c.$lordMargen;
+
+    @media only screen and (min-width: c.$lordMovil) {
+        padding: 130px 24px;
+    }
+
+    @media only screen and (min-width: c.$lordTablet) {
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 9vw;
+    }
+
+    &__intro > p {
+        max-width: 440px;
+        margin-top: 25px;
+        color: c.$lordApagado;
+        line-height: 1.7;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        @media only screen and (min-width: c.$lordMovil) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__paso {
+        min-height: 190px;
+        border: 1px solid rgba(240, 234, 220, 0.12);
+        padding: 30px;
+
+        @media only screen and (min-width: c.$lordMovil) {
+            min-height: 230px;
+        }
+    }
+
+    &__numero {
+        color: c.$lordOro;
+        font-family: c.$lordFuenteTitulos;
+        font-size: 11px;
+    }
+
+    &__titulo {
+        margin: 30px 0 10px;
+        font-family: c.$lordFuenteTitulos;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    &__texto {
+        color: c.$lordApagado;
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    &--valores {
+        display: block;
+        padding: 75px c.$lordMargen;
+
+        @media only screen and (min-width: c.$lordMovil) {
+            padding: 110px 24px;
+        }
+    }
+
+    &--valores &__grid {
+        margin-top: 10px;
+
+        @media only screen and (min-width: c.$lordMovil) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &--valores &__paso {
+        min-height: 0;
+        border: 0;
+        border-top: 1px solid c.$lordLinea;
+        padding: 30px 10px;
+
+        @media only screen and (min-width: c.$lordMovil) {
+            border-top: 0;
+            border-left: 1px solid c.$lordLinea;
+            padding: 20px 40px;
+        }
+    }
+}

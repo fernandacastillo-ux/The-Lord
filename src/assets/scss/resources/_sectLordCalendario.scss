@@ -1,0 +1,102 @@
+@use "config" as c;
+
+// Calendario de próximas paradas: introducción y lista de fechas.
+.sectLordCalendario {
+    display: grid;
+    max-width: c.$lordAncho;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 85px c.$lordMargen;
+
+    @media only screen and (min-width: c.$lordMovil) {
+        padding: 120px 24px;
+    }
+
+    @media only screen and (min-width: c.$lordTablet) {
+        grid-template-columns: 0.75fr 1.25fr;
+        gap: 8vw;
+    }
+
+    &__intro > p {
+        max-width: 420px;
+        margin-top: 26px;
+        color: c.$lordApagado;
+        line-height: 1.75;
+    }
+
+    &__lista {
+        border-top: 1px solid rgba(240, 234, 220, 0.15);
+    }
+
+    &__fecha {
+        display: grid;
+        grid-template-columns: 30px 1fr;
+        align-items: center;
+        gap: 6px 18px;
+        border-bottom: 1px solid rgba(240, 234, 220, 0.15);
+        padding: 25px 0;
+        transition:
+            background 180ms ease,
+            padding 180ms ease;
+
+        @media only screen and (min-width: c.$lordMovil) {
+            grid-template-columns: 38px 105px 1fr auto;
+        }
+
+        &:hover {
+            padding-right: 12px;
+            padding-left: 12px;
+            background: rgba(216, 166, 48, 0.045);
+        }
+
+        > strong,
+        > small {
+            grid-column: 2;
+
+            @media only screen and (min-width: c.$lordMovil) {
+                grid-column: auto;
+            }
+        }
+
+        > strong {
+            color: c.$lordOro;
+            font-family: c.$lordFuenteTitulos;
+            font-size: 13px;
+        }
+
+        h3 {
+            font-family: c.$lordFuenteTitulos;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        p,
+        small {
+            color: c.$lordApagado;
+            font-size: 11px;
+        }
+    }
+
+    &__numero {
+        grid-row: span 3;
+        align-self: start;
+        color: #8a867d;
+        font-family: c.$lordFuenteTitulos;
+        font-size: 10px;
+
+        @media only screen and (min-width: c.$lordMovil) {
+            grid-row: auto;
+            align-self: center;
+        }
+    }
+
+    // En móvil el número ocupa su columna y los datos se apilan en la segunda.
+    &__datos {
+        grid-column: 2;
+
+        @media only screen and (min-width: c.$lordMovil) {
+            grid-column: auto;
+        }
+    }
+}

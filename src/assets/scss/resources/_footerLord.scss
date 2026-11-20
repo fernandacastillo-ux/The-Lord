@@ -1,0 +1,96 @@
+@use "config" as c;
+
+// :where() neutraliza los colores de etiqueta de _config.scss también fuera de .lord (showroom).
+:where(.footerLord) p,
+:where(.footerLord) span,
+:where(.footerLord) a {
+    color: inherit;
+}
+
+:where(.footerLord) ul {
+    list-style: none;
+}
+
+.footerLord {
+    @include c.lordContenedor(90px);
+    padding-bottom: 28px;
+    background: c.$lordTinta;
+    color: c.$lordHueso;
+    font-family: c.$lordFuenteTextos;
+    text-align: center;
+
+    &__marca {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__runa {
+        width: 58px;
+    }
+
+    &__nombre {
+        margin-top: 8px;
+        font-family: c.$lordFuenteTitulos;
+        font-size: 31px;
+        font-weight: 800;
+        letter-spacing: 0.15em;
+    }
+
+    &__lema {
+        margin-top: 5px;
+        color: c.$lordOro;
+        font-size: 8px;
+        font-weight: 700;
+        letter-spacing: 0.27em;
+        text-transform: uppercase;
+    }
+
+    .enlacesLord {
+        display: flex;
+        margin: 40px 0 65px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 22px;
+
+        @media only screen and (min-width: c.$lordMovil) {
+            gap: 38px;
+        }
+    }
+
+    .enlacesLord__link {
+        color: c.$lordApagado;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        transition: color 180ms ease;
+
+        &:hover,
+        &[aria-current="page"] {
+            color: c.$lordOro;
+        }
+
+        // En el pie el enlace de contacto es uno más: sin botón ni flecha.
+        .lordFlecha {
+            display: none;
+        }
+    }
+
+    &__base {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        border-top: 1px solid rgba(240, 234, 220, 0.1);
+        padding-top: 24px;
+        color: #8a867d;
+        font-size: 9px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+
+        @media only screen and (min-width: c.$lordMovil) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}

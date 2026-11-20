@@ -2,229 +2,145 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/svg+xml" href="<?= asset("favicon.svg") ?>" />
-        <link rel="canonical" href="<?= e(app_url("/es/quienessomos")) ?>" />
-        <link rel="alternate" hreflang="es" href="<?= e(app_url("/es/quienessomos")) ?>" />
-        <link rel="alternate" hreflang="eu" href="<?= e(app_url("/eu/quienessomos")) ?>" />
-        <link rel="alternate" hreflang="x-default" href="<?= e(app_url("/es/quienessomos")) ?>" />
-        <title>Quiénes somos | Stack formación</title>
-        <meta name="description" content="Lorem ipsum dolor sit amet" />
+        <link rel="canonical" href="<?= e(app_url("/es/quienes-somos")) ?>" />
+        <link rel="alternate" hreflang="es" href="<?= e(app_url("/es/quienes-somos")) ?>" />
+        <link rel="alternate" hreflang="eu" href="<?= e(app_url("/eu/nor-gara")) ?>" />
+        <link rel="alternate" hreflang="x-default" href="<?= e(app_url("/es/quienes-somos")) ?>" />
+        <title>Quiénes somos: la historia del foodtruck vikingo | THE LORD</title>
+        <meta
+            name="description"
+            content="Nacimos en 2019 alrededor de una plancha prestada en Madrid. Conoce el origen del nombre THE LORD, nuestra vida sobre ruedas y los valores del clan."
+        />
         <meta name="robots" content="index, follow" />
-        <meta property="og:type" content="profile" />
+        <meta property="og:type" content="website" />
         <meta property="og:locale" content="es_ES" />
-        <meta property="og:site_name" content="Lorem ipsum dolor sit amet" />
-        <meta property="og:title" content="Lorem ipsum dolor sit amet" />
-        <meta property="og:description" content="Lorem ipsum dolor sit amet" />
-        <meta property="og:url" content="<?= e(app_url("/es/quienessomos")) ?>" />
-        <meta property="og:image" content="<?= e(app_url("assets/img/views/matrix-5.webp")) ?>" />
+        <meta property="og:site_name" content="THE LORD" />
+        <meta property="og:title" content="Quiénes somos: la historia del foodtruck vikingo | THE LORD" />
+        <meta
+            property="og:description"
+            content="Nacimos en 2019 alrededor de una plancha prestada en Madrid. Conoce el origen del nombre THE LORD, nuestra vida sobre ruedas y los valores del clan."
+        />
+        <meta property="og:url" content="<?= e(app_url("/es/quienes-somos")) ?>" />
+        <meta property="og:image" content="<?= e(app_url("assets/img/thelord/cabecera-quienes-somos.webp")) ?>" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Lorem ipsum dolor sit amet" />
-        <meta name="twitter:description" content="Lorem ipsum dolor sit amet" />
-        <meta name="twitter:image" content="<?= e(app_url("assets/img/views/matrix-5.webp")) ?>" />
+        <meta name="twitter:title" content="Quiénes somos: la historia del foodtruck vikingo | THE LORD" />
+        <meta
+            name="twitter:description"
+            content="Nacimos en 2019 alrededor de una plancha prestada en Madrid. Conoce el origen del nombre THE LORD, nuestra vida sobre ruedas y los valores del clan."
+        />
+        <meta name="twitter:image" content="<?= e(app_url("assets/img/thelord/cabecera-quienes-somos.webp")) ?>" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap"
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <?= vite_tags($route["resources"] ?? null) ?>
         <?php require app_path("includes/cookielad.php"); ?>
     </head>
-    <body>
+    <body class="lord">
         <?php require app_path("includes/es/nav.php"); ?>
 
-        <header class="header02">
+        <header class="headerLord">
             <img
-                class="header02__media"
-                src="<?= asset("assets/img/views/matrix-5.webp") ?>"
-                width="480"
-                height="207"
-                alt="Matrix"
-                title="Lorem ipsum"
+                class="headerLord__fondo"
+                src="<?= asset("assets/img/thelord/cabecera-quienes-somos.webp") ?>"
+                width="1800"
+                height="1000"
+                alt=""
                 fetchpriority="high"
                 decoding="async"
             />
-            <div class="header02__content">
-                <p class="header02__eyebrow">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.
+            <div class="headerLord__contenido">
+                <p class="lordEyebrow">Quiénes somos</p>
+                <h1 class="headerLord__titulo">Nacimos para<br /><em>mandar en el fuego.</em></h1>
+                <p class="headerLord__texto">
+                    Una cocina pequeña, una ambición enorme y la carretera como hogar. Esta es la historia de THE
+                    LORD.
                 </p>
-                <h1 class="header02__title">Quiénes somos</h1>
-                <p class="header02__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.
-                </p>
-                <a href="<?= url("/es/contacto") ?>" class="boton" title="Lorem ipsum">Lorem ipsum dolor sit amet</a>
             </div>
         </header>
 
-        <main>
-            <section aria-labelledby="equipo-intro-es">
-                <article class="art14">
-                    <div class="content">
-                        <div class="h2Especial">
-                            <span aria-hidden="true"></span>
-                            <h2 id="equipo-intro-es">Lorem ipsum dolor sit amet</h2>
-                        </div>
-                        <h3>Lorem ipsum dolor sit amet</h3>
+        <main id="contenido">
+            <section class="sectLordHistoria" aria-labelledby="historia-titulo-es">
+                <p class="sectLordHistoria__sello">
+                    <span>Desde</span>
+                    <strong>2019</strong>
+                    <small>Madrid</small>
+                </p>
+                <div>
+                    <p class="lordEyebrow">El origen del nombre</p>
+                    <h2 class="lordTitulo" id="historia-titulo-es">No es un título.<br /><em>Es una promesa.</em></h2>
+                    <div class="sectLordHistoria__columnas">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
+                            THE LORD nació alrededor de una plancha prestada, durante una noche de verano entre amigos.
+                            Al probar la primera receta, alguien levantó la hamburguesa y dijo: «Esto manda sobre todo
+                            lo demás». La frase se quedó; el nombre también.
                         </p>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
+                            Elegimos una estética vikinga porque representa cómo entendemos el oficio: valentía para
+                            crear, respeto por el producto y un clan que avanza unido. No buscamos coronas. Queremos
+                            ganarnos el título con cada servicio.
                         </p>
-                        <img
-                            src="<?= asset("assets/img/views/matrix-6.webp") ?>"
-                            width="480"
-                            height="207"
-                            alt="Matrix"
-                            title="Lorem ipsum"
-                            loading="lazy"
-                            decoding="async"
-                        />
                     </div>
-                </article>
+                </div>
             </section>
 
-            <section aria-labelledby="equipo-metodo-es">
-                <div class="h2Especial">
-                    <span aria-hidden="true"></span>
-                    <h2 id="equipo-metodo-es">Lorem ipsum dolor sit amet</h2>
+            <section class="sectLordSplit sectLordSplit--claro" aria-labelledby="ruedas-titulo-es">
+                <img
+                    class="sectLordSplit__foto"
+                    src="<?= asset("assets/img/thelord/foodtruck.webp") ?>"
+                    width="1200"
+                    height="1100"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                />
+                <div class="sectLordSplit__texto">
+                    <p class="lordEyebrow">Nuestra vida sobre ruedas</p>
+                    <h2 class="lordTitulo" id="ruedas-titulo-es">Un restaurante<br /><em>sin fronteras</em></h2>
+                    <p>
+                        Empezamos recorriendo mercados de barrio con una carta de tres hamburguesas y una plancha que
+                        apenas cabía en el vehículo. Hoy cocinamos en festivales, celebraciones y encuentros
+                        gastronómicos por toda España.
+                    </p>
+                    <p>
+                        Ser parte del mundo de la cocina itinerante significa llegar cada semana a una mesa distinta,
+                        conocer a personas nuevas y convertir cualquier aparcamiento en un comedor lleno de vida.
+                    </p>
+                    <a class="lordBoton" href="<?= url("/es/contacto") ?>" title="Contratar THE LORD para un evento">
+                        Invítanos a tu evento <span class="lordFlecha" aria-hidden="true"></span>
+                    </a>
                 </div>
-                <article class="art09">
-                    <h3>Lorem ipsum dolor sit amet</h3>
-                    <div class="art09-content">
-                        <div class="contenedor-lista">
-                            <h4>Lorem ipsum dolor sit amet</h4>
-                            <ul>
-                                <li>
-                                    <img src="<?= asset("assets/img/icons/checkmark-circle.svg") ?>" alt="" title="" aria-hidden="true" /><span
-                                        >Lorem ipsum dolor sit amet</span
-                                    >
-                                </li>
-                                <li>
-                                    <img src="<?= asset("assets/img/icons/checkmark-circle.svg") ?>" alt="" title="" aria-hidden="true" /><span
-                                        >Lorem ipsum dolor sit amet</span
-                                    >
-                                </li>
-                                <li>
-                                    <img src="<?= asset("assets/img/icons/checkmark-circle.svg") ?>" alt="" title="" aria-hidden="true" /><span
-                                        >Lorem ipsum dolor sit amet</span
-                                    >
-                                </li>
-                                <li>
-                                    <img src="<?= asset("assets/img/icons/checkmark-circle.svg") ?>" alt="" title="" aria-hidden="true" /><span
-                                        >Lorem ipsum dolor sit amet</span
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="contenedor-lista">
-                            <h4>Lorem ipsum dolor sit amet</h4>
-                            <ul>
-                                <li>
-                                    <img src="<?= asset("assets/img/icons/checkmark-circle.svg") ?>" alt="" title="" aria-hidden="true" /><span
-                                        >Lorem ipsum dolor sit amet</span
-                                    >
-                                </li>
-                                <li>
-                                    <img src="<?= asset("assets/img/icons/checkmark-circle.svg") ?>" alt="" title="" aria-hidden="true" /><span
-                                        >Lorem ipsum dolor sit amet</span
-                                    >
-                                </li>
-                                <li>
-                                    <img src="<?= asset("assets/img/icons/checkmark-circle.svg") ?>" alt="" title="" aria-hidden="true" /><span
-                                        >Lorem ipsum dolor sit amet</span
-                                    >
-                                </li>
-                                <li>
-                                    <img src="<?= asset("assets/img/icons/checkmark-circle.svg") ?>" alt="" title="" aria-hidden="true" /><span
-                                        >Lorem ipsum dolor sit amet</span
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
             </section>
 
-            <section aria-labelledby="equipo-oficios-es">
-                <div class="h2Especial">
-                    <span aria-hidden="true"></span>
-                    <h2 id="equipo-oficios-es">Lorem ipsum dolor sit amet</h2>
+            <section class="sectLordPasos sectLordPasos--valores" aria-labelledby="valores-titulo-es">
+                <h2 class="lordEyebrow" id="valores-titulo-es">Nuestros valores</h2>
+                <div class="sectLordPasos__grid">
+                    <article class="sectLordPasos__paso" aria-labelledby="valor-producto-es">
+                        <span class="sectLordPasos__numero" aria-hidden="true">01</span>
+                        <h3 class="sectLordPasos__titulo" id="valor-producto-es">Producto</h3>
+                        <p class="sectLordPasos__texto">
+                            Trabajamos con proveedores cercanos, carne nacional y preparaciones hechas por nosotros.
+                        </p>
+                    </article>
+                    <article class="sectLordPasos__paso" aria-labelledby="valor-oficio-es">
+                        <span class="sectLordPasos__numero" aria-hidden="true">02</span>
+                        <h3 class="sectLordPasos__titulo" id="valor-oficio-es">Oficio</h3>
+                        <p class="sectLordPasos__texto">
+                            Cocinamos cada pedido al momento y cuidamos el detalle incluso cuando la cola es larga.
+                        </p>
+                    </article>
+                    <article class="sectLordPasos__paso" aria-labelledby="valor-comunidad-es">
+                        <span class="sectLordPasos__numero" aria-hidden="true">03</span>
+                        <h3 class="sectLordPasos__titulo" id="valor-comunidad-es">Comunidad</h3>
+                        <p class="sectLordPasos__texto">
+                            Colaboramos con mercados, productores y proyectos que hacen crecer la cocina callejera.
+                        </p>
+                    </article>
                 </div>
-
-                <article class="art16">
-                    <div>
-                        <h3>Lorem ipsum dolor sit amet</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
-                        </p>
-                        <a href="<?= url("/es/servicio1") ?>" class="boton" title="Lorem ipsum">Lorem ipsum dolor sit amet</a>
-                    </div>
-                    <div>
-                        <img
-                            src="<?= asset("assets/img/views/matrix-1.webp") ?>"
-                            width="480"
-                            height="207"
-                            alt="Matrix"
-                            title="Lorem ipsum"
-                            loading="lazy"
-                            decoding="async"
-                        />
-                    </div>
-                </article>
-
-                <article class="art16 invert">
-                    <div>
-                        <h3>Lorem ipsum dolor sit amet</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
-                        </p>
-                        <a href="<?= url("/es/servicio2") ?>" class="boton" title="Lorem ipsum">Lorem ipsum dolor sit amet</a>
-                    </div>
-                    <div>
-                        <img
-                            src="<?= asset("assets/img/views/matrix-2.webp") ?>"
-                            width="480"
-                            height="207"
-                            alt="Matrix"
-                            title="Lorem ipsum"
-                            loading="lazy"
-                            decoding="async"
-                        />
-                    </div>
-                </article>
-
-                <article class="art13">
-                    <img alt="" title="" src="<?= asset("assets/img/test/dummy_1200.avif") ?>" />
-                    <div>
-                        <h3>Artículo 13 · Variante 03</h3>
-                        <p>
-                            Matrix ipsum dolor sit amet, consectetur adipisicing elit. Zion libertatem defendit dum
-                            machinae mundum regunt.
-                        </p>
-                        <p>
-                            Matrix ipsum dolor sit amet, consectetur adipisicing elit. Agent Smith erroribus reiciendis
-                            et systema simulacrum celat.
-                        </p>
-                        <a href="#" class="boton">CTA</a>
-                    </div>
-                </article>
             </section>
         </main>
 

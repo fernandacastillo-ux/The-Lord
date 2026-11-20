@@ -38,22 +38,22 @@ $copys = [
         "mensaje_longitud" => "El mensaje debe tener entre 4 y 200 caracteres.",
         "correo_preparacion" => "No se ha podido preparar el correo. Inténtalo de nuevo más tarde.",
         "correo_envio" => "No se ha podido enviar el correo. Inténtalo de nuevo más tarde.",
-        "admin_asunto" => "Nueva consulta desde la web de Stack formación: %s",
-        "admin_aviso" => "Se ha recibido una nueva consulta desde la web de Stack formación.",
+        "admin_asunto" => "Nueva consulta desde la web de THE LORD: %s",
+        "admin_aviso" => "Se ha recibido una nueva consulta desde la web de THE LORD.",
         "admin_explicacion" => "Se ha recibido una consulta desde el formulario de la web.",
         "admin_contexto" => "Nueva consulta de",
         "admin_razon" => "Puedes responder directamente al correo facilitado por esta persona.",
         "admin_responder" => "Responde en cuanto te sea posible.",
         "admin_texto" => "Nueva consulta de %s\nTeléfono: %s\nEmail: %s\nMensaje: %s\nFecha: %s\nURL: %s",
-        "usuario_asunto" => "%s, hemos recibido tu consulta | Stack formación",
+        "usuario_asunto" => "%s, hemos recibido tu consulta | THE LORD",
         "usuario_aviso" => "Tu consulta se ha recibido correctamente.",
-        "usuario_explicacion" => "Gracias por contactar con Stack formación. Hemos recibido correctamente tu consulta.",
+        "usuario_explicacion" => "Gracias por contactar con THE LORD. Hemos recibido correctamente tu consulta.",
         "usuario_contexto" => "Gracias por escribir,",
         "usuario_razon" => "Estos son los datos que nos has enviado.",
         "usuario_responder" => "Responderemos lo antes posible.",
         "usuario_texto" => "Hola %s, hemos recibido tu consulta.\nTeléfono: %s\nEmail: %s\nMensaje: %s\nFecha: %s",
         "respuesta_final" => "Gracias por escribir, %s.",
-        "logo_alt" => "Stack formación",
+        "logo_alt" => "THE LORD",
         "automatico" => "Notificación automática",
         "etiqueta_consulta" => "Consulta web",
         "etiqueta_web" => "Web",
@@ -65,7 +65,7 @@ $copys = [
         "etiqueta_url" => "URL de origen",
         "ir_web" => "Ir a la web",
         "despedida" => "Un saludo,",
-        "firma" => "Stack formación",
+        "firma" => "THE LORD",
         "aviso_automatico" =>
             "Este correo se ha generado automáticamente. Si no esperabas este mensaje, puedes ignorarlo.",
     ],
@@ -82,24 +82,24 @@ $copys = [
         "mensaje_longitud" => "Mezuak 4 eta 200 karaktere artean izan behar ditu.",
         "correo_preparacion" => "Ezin izan da mezu elektronikoa prestatu. Saiatu berriro geroago.",
         "correo_envio" => "Ezin izan da mezu elektronikoa bidali. Saiatu berriro geroago.",
-        "admin_asunto" => "Kontsulta berria Formakuntza stackaren webgunetik: %s",
-        "admin_aviso" => "Formakuntza stackaren webgunetik kontsulta berria jaso da.",
+        "admin_asunto" => "Kontsulta berria THE LORDen webgunetik: %s",
+        "admin_aviso" => "THE LORDen webgunetik kontsulta berria jaso da.",
         "admin_explicacion" => "Webguneko formularioaren bidez kontsulta bat jaso da.",
         "admin_contexto" => "Kontsulta berri bat bidali du",
         "admin_razon" => "Pertsona honek emandako helbide elektronikora zuzenean erantzun dezakezu.",
         "admin_responder" => "Erantzun ahalik eta lasterren.",
         "admin_texto" => "Kontsulta berria: %s\nTelefonoa: %s\nHelbide elektronikoa: %s\nMezua: %s\nData: %s\nURLa: %s",
-        "usuario_asunto" => "%s, zure kontsulta jaso dugu | Stack formación",
+        "usuario_asunto" => "%s, zure kontsulta jaso dugu | THE LORD",
         "usuario_aviso" => "Zure kontsulta behar bezala jaso dugu.",
         "usuario_explicacion" =>
-            "Eskerrik asko Formakuntza stackarekin harremanetan jartzeagatik. Zure kontsulta behar bezala jaso dugu.",
+            "Eskerrik asko THE LORDekin harremanetan jartzeagatik. Zure kontsulta behar bezala jaso dugu.",
         "usuario_contexto" => "Eskerrik asko idazteagatik,",
         "usuario_razon" => "Hauek dira bidali dizkiguzun datuak.",
         "usuario_responder" => "Ahal bezain laster erantzungo dizugu.",
         "usuario_texto" =>
             "Kaixo %s, zure kontsulta jaso dugu.\nTelefonoa: %s\nHelbide elektronikoa: %s\nMezua: %s\nData: %s",
         "respuesta_final" => "Eskerrik asko idazteagatik, %s.",
-        "logo_alt" => "Formakuntza stacka",
+        "logo_alt" => "THE LORD",
         "automatico" => "Jakinarazpen automatikoa",
         "etiqueta_consulta" => "Web-kontsulta",
         "etiqueta_web" => "Webgunea",
@@ -111,7 +111,7 @@ $copys = [
         "etiqueta_url" => "Jatorrizko URLa",
         "ir_web" => "Webgunera joan",
         "despedida" => "Agur bero bat,",
-        "firma" => "Stack formación",
+        "firma" => "THE LORD",
         "aviso_automatico" => "Mezu hau automatikoki sortu da. Ez bazenuen espero, ez ikusi egin diezaiokezu.",
     ],
 ];
@@ -201,9 +201,9 @@ $varsComunes = [
 
 // 4. Correo de aviso a la administración.
 $correoEmisor = env("EMAIL_WEB", "");
-$nombreEmisor = "Stack formación";
+$nombreEmisor = "THE LORD";
 $correoDestinatario = env("EMAIL_ADMIN", "");
-$nombreDestinatario = "Stack formación";
+$nombreDestinatario = "THE LORD";
 $correoResponderA = $email;
 $nombreResponderA = $nombreAsunto;
 $asunto = sprintf($copy["admin_asunto"], $nombreAsunto);
@@ -239,11 +239,11 @@ if (!$correoAdminEnviado) {
 
 // 5. Correo de confirmación a la persona que ha escrito.
 $correoEmisor = env("EMAIL_WEB", "");
-$nombreEmisor = "Stack formación";
+$nombreEmisor = "THE LORD";
 $correoDestinatario = $email;
 $nombreDestinatario = $nombreAsunto;
 $correoResponderA = env("EMAIL_ADMIN", env("EMAIL_WEB", ""));
-$nombreResponderA = "Stack formación";
+$nombreResponderA = "THE LORD";
 $asunto = sprintf($copy["usuario_asunto"], $nombreAsunto);
 
 $vars = array_merge($varsComunes, [

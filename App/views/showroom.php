@@ -8,6 +8,12 @@
         <meta name="description" content="Showroom interno con todos los resources y componentes del stack." />
         <meta name="robots" content="noindex, nofollow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap"
+        />
         <?= vite_tags($route["resources"] ?? null) ?>
         <?php require app_path("includes/cookielad.php"); ?>
     </head>
@@ -197,22 +203,22 @@
                             Matrix ipsum dolor sit amet, consectetur adipisicing elit. Neo eligendi veritatis codicem et
                             simulacrum. Morpheus quaerat optionem, pillula rubra aperiam systema et realitatem.
                         </p>
-                        <a href="<?= url("/es/servicios") ?>" class="moduloBoton02">
+                        <a href="<?= url("/es/hamburguesas") ?>" class="moduloBoton02">
                             <span>Módulo Botón 02</span>
                             <img src="<?= asset("assets/img/icons/arrow-forward-outline.svg") ?>" alt="Matrix" title="Lorem ipsum" />
                         </a>
                     </div>
 
                     <div class="imagenes">
-                        <a href="<?= url("/es/servicios") ?>" title="Lorem ipsum">
+                        <a href="<?= url("/es/hamburguesas") ?>" title="Lorem ipsum">
                             <img src="<?= asset("assets/img/test/dummy01.avif") ?>" alt="Matrix" title="Lorem ipsum" />
                             <h4>Matrix ipsum 01</h4>
                         </a>
-                        <a href="<?= url("/es/servicios") ?>" title="Lorem ipsum">
+                        <a href="<?= url("/es/hamburguesas") ?>" title="Lorem ipsum">
                             <img src="<?= asset("assets/img/test/dummy02.avif") ?>" alt="Matrix" title="Lorem ipsum" />
                             <h4>Matrix ipsum 02</h4>
                         </a>
-                        <a href="<?= url("/es/servicios") ?>" title="Lorem ipsum">
+                        <a href="<?= url("/es/hamburguesas") ?>" title="Lorem ipsum">
                             <img src="<?= asset("assets/img/test/dummy04.avif") ?>" alt="Matrix" title="Lorem ipsum" />
                             <h4>Matrix ipsum 03</h4>
                         </a>
@@ -1022,6 +1028,467 @@
                     </div>
                 </div>
             </section>
+
+            <!--
+                Recursos THE LORD. El div.lord aplica la base del tema (_lordBase.scss).
+                Las cabeceras usan H2 en lugar de H1 porque el showroom solo tiene un H1.
+                navLord y footerLord se ven en la cabecera y el pie de esta misma página.
+                sectLordContacto se muestra sin formulario: sus IDs son los de artForm02, ya catalogado arriba.
+            -->
+            <div class="lord showroomLord">
+                <p class="showroomLord__rotulo">headerLord</p>
+                <header class="headerLord">
+                    <img class="headerLord__fondo" src="<?= asset("assets/img/thelord/cabecera-contacto.webp") ?>" width="1800" height="1000" alt="" loading="lazy" decoding="async" />
+                    <div class="headerLord__contenido">
+                        <p class="lordEyebrow">Antetítulo de ejemplo</p>
+                        <h2 class="headerLord__titulo">Lorem ipsum<br /><em>dolor sit amet.</em></h2>
+                        <p class="headerLord__texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        <div class="headerLord__acciones">
+                            <a class="lordBoton" href="#showroom-lord" title="Botón de ejemplo">Botón <span class="lordFlecha" aria-hidden="true"></span></a>
+                        </div>
+                    </div>
+                </header>
+
+                <p class="showroomLord__rotulo" id="showroom-lord">headerLordSlider</p>
+                <header class="headerLordSlider" data-lord-carrusel data-intervalo="5500">
+                    <div class="headerLordSlider__fondos">
+                        <img class="headerLordSlider__imagen is-activa" src="<?= asset("assets/img/thelord/hero-1.webp") ?>" width="1920" height="1080" alt="Imagen de ejemplo 1" loading="lazy" decoding="async" data-lord-slide />
+                        <img class="headerLordSlider__imagen" src="<?= asset("assets/img/thelord/hero-2.webp") ?>" width="1920" height="1080" alt="Imagen de ejemplo 2" loading="lazy" decoding="async" data-lord-slide />
+                    </div>
+                    <div class="headerLordSlider__humo" aria-hidden="true"></div>
+                    <div class="headerLordSlider__contenido">
+                        <p class="lordEyebrow"><span aria-hidden="true"></span>Lorem · Ipsum<span aria-hidden="true"></span></p>
+                        <h2 class="headerLordSlider__titulo">Lorem<br /><em>ipsum</em></h2>
+                        <p class="headerLordSlider__texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="headerLordSlider__acciones">
+                            <a class="lordBoton" href="#showroom-lord" title="Botón de ejemplo">Botón <span class="lordFlecha" aria-hidden="true"></span></a>
+                            <a class="headerLordSlider__enlace" href="#showroom-lord" title="Enlace de ejemplo">Enlace <span aria-hidden="true">↓</span></a>
+                        </div>
+                    </div>
+                    <div class="headerLordSlider__controles" role="group" aria-label="Controles del carrusel de ejemplo">
+                        <button class="headerLordSlider__flecha" type="button" aria-label="Imagen anterior" data-lord-anterior><span aria-hidden="true">←</span></button>
+                        <div class="headerLordSlider__puntos">
+                            <button class="is-activa" type="button" aria-label="Ver imagen 1" aria-current="true" data-lord-punto></button>
+                            <button type="button" aria-label="Ver imagen 2" aria-current="false" data-lord-punto></button>
+                        </div>
+                        <button class="headerLordSlider__flecha" type="button" aria-label="Imagen siguiente" data-lord-siguiente><span aria-hidden="true">→</span></button>
+                    </div>
+                    <p class="headerLordSlider__sello" aria-hidden="true"><span>Lorem</span><span class="lordRuna"></span><span>Ipsum</span></p>
+                </header>
+
+                <p class="showroomLord__rotulo">headerLordGrill</p>
+                <header class="headerLordGrill" data-lord-carrusel data-intervalo="4200">
+                    <div class="headerLordGrill__fotogramas">
+                        <img class="headerLordGrill__fotograma is-activa" src="<?= asset("assets/img/thelord/parrilla-1.webp") ?>" width="1920" height="1080" alt="Fotograma de ejemplo 1" loading="lazy" decoding="async" data-lord-slide />
+                        <img class="headerLordGrill__fotograma" src="<?= asset("assets/img/thelord/parrilla-2.webp") ?>" width="1920" height="1080" alt="Fotograma de ejemplo 2" loading="lazy" decoding="async" data-lord-slide />
+                    </div>
+                    <div class="headerLordGrill__sombra" aria-hidden="true"></div>
+                    <div class="headerLordGrill__brasas" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                    <div class="headerLordGrill__contenido">
+                        <p class="headerLordGrill__directo"><span aria-hidden="true"></span>Lorem ipsum</p>
+                        <p class="lordEyebrow">Antetítulo</p>
+                        <h2 class="headerLordGrill__titulo">Lorem ipsum.<br /><em>Dolor sit.</em></h2>
+                        <p class="headerLordGrill__texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a class="lordBoton" href="#showroom-lord" title="Botón de ejemplo">Botón <span aria-hidden="true">↓</span></a>
+                    </div>
+                    <div class="headerLordGrill__controles" role="group" aria-label="Controles de la secuencia de ejemplo">
+                        <button class="headerLordGrill__pausa" type="button" aria-label="Pausar secuencia" data-lord-pausa data-label-pausar="Pausar secuencia" data-label-reproducir="Reproducir secuencia"></button>
+                        <div class="headerLordGrill__linea">
+                            <button class="is-activa" type="button" aria-label="Ver plano 1" aria-current="true" data-lord-punto><span></span></button>
+                            <button type="button" aria-label="Ver plano 2" aria-current="false" data-lord-punto><span></span></button>
+                        </div>
+                        <p class="headerLordGrill__contador" aria-hidden="true" data-lord-contador>01 / 02</p>
+                    </div>
+                    <p class="headerLordGrill__temperatura" aria-hidden="true"><span>Lorem</span><strong>280°</strong><i>Ipsum</i></p>
+                </header>
+
+                <p class="showroomLord__rotulo">sectLordManifiesto</p>
+                <section class="sectLordManifiesto" aria-labelledby="sr-manifiesto">
+                    <p class="sectLordManifiesto__numero" aria-hidden="true">01 <span></span></p>
+                    <div>
+                        <p class="lordEyebrow">Antetítulo</p>
+                        <h2 class="lordTitulo" id="sr-manifiesto">Lorem ipsum<br /><em>dolor sit.</em></h2>
+                    </div>
+                    <div class="sectLordManifiesto__texto">
+                        <p class="sectLordManifiesto__lead">Lorem ipsum <strong>dolor sit.</strong></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        <ul class="sectLordManifiesto__datos">
+                            <li><strong>100%</strong><span>Lorem</span></li>
+                            <li><strong>0</strong><span>Ipsum</span></li>
+                            <li><strong>∞</strong><span>Dolor</span></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <p class="showroomLord__rotulo">sectLordCarta + artLordBurger (normal y --detallada)</p>
+                <section class="sectLordCarta" aria-labelledby="sr-carta">
+                    <div class="sectLordCarta__cabecera">
+                        <div>
+                            <p class="lordEyebrow">Antetítulo</p>
+                            <h2 class="lordTitulo" id="sr-carta">Lorem <em>ipsum</em></h2>
+                        </div>
+                        <div class="sectLordCarta__intro">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a class="lordEnlace sectLordCarta__enlace" href="#showroom-lord" title="Enlace de ejemplo">Enlace <span class="lordFlecha" aria-hidden="true"></span></a>
+                        </div>
+                    </div>
+                    <div class="sectLordCarta__grid">
+                        <article class="artLordBurger" aria-labelledby="sr-burger-1">
+                            <div class="artLordBurger__foto">
+                                <img src="<?= asset("assets/img/thelord/ragnarok.webp") ?>" width="900" height="720" alt="Hamburguesa de ejemplo" loading="lazy" decoding="async" />
+                                <span class="artLordBurger__indice" aria-hidden="true">01</span>
+                                <span class="artLordBurger__etiqueta">Etiqueta</span>
+                            </div>
+                            <div class="artLordBurger__info">
+                                <div class="artLordBurger__fila">
+                                    <h3 class="artLordBurger__nombre" id="sr-burger-1">Lorem</h3>
+                                    <p class="artLordBurger__precio">9,90 <small>€</small></p>
+                                </div>
+                                <p class="artLordBurger__descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <a class="lordEnlace" href="#showroom-lord" title="Enlace de ejemplo">Enlace <span class="lordFlecha" aria-hidden="true"></span></a>
+                            </div>
+                        </article>
+                        <article class="artLordBurger" aria-labelledby="sr-burger-2">
+                            <div class="artLordBurger__foto">
+                                <img src="<?= asset("assets/img/thelord/berserker.webp") ?>" width="900" height="720" alt="Hamburguesa de ejemplo" loading="lazy" decoding="async" />
+                                <span class="artLordBurger__indice" aria-hidden="true">02</span>
+                                <span class="artLordBurger__etiqueta">Etiqueta</span>
+                            </div>
+                            <div class="artLordBurger__info">
+                                <div class="artLordBurger__fila">
+                                    <h3 class="artLordBurger__nombre" id="sr-burger-2">Ipsum</h3>
+                                    <p class="artLordBurger__precio">9,90 <small>€</small></p>
+                                </div>
+                                <p class="artLordBurger__descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <a class="lordEnlace" href="#showroom-lord" title="Enlace de ejemplo">Enlace <span class="lordFlecha" aria-hidden="true"></span></a>
+                            </div>
+                        </article>
+                        <article class="artLordBurger artLordBurger--detallada" aria-labelledby="sr-burger-3">
+                            <div class="artLordBurger__foto">
+                                <img src="<?= asset("assets/img/thelord/freya.webp") ?>" width="900" height="720" alt="Hamburguesa de ejemplo" loading="lazy" decoding="async" />
+                                <span class="artLordBurger__indice" aria-hidden="true">03</span>
+                                <span class="artLordBurger__etiqueta">Etiqueta</span>
+                            </div>
+                            <div class="artLordBurger__info">
+                                <div class="artLordBurger__fila">
+                                    <h3 class="artLordBurger__nombre" id="sr-burger-3">Dolor</h3>
+                                    <p class="artLordBurger__precio">9,90 <small>€</small></p>
+                                </div>
+                                <p class="artLordBurger__descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <ul class="artLordBurger__ingredientes" aria-label="Ingredientes principales">
+                                    <li>Lorem</li>
+                                    <li>Ipsum</li>
+                                    <li>Dolor</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <p class="showroomLord__rotulo">sectLordExtras</p>
+                <section class="sectLordExtras" aria-labelledby="sr-extras">
+                    <div class="sectLordExtras__visual">
+                        <img class="sectLordExtras__fondo" src="<?= asset("assets/img/thelord/extras.webp") ?>" width="1100" height="1100" alt="" loading="lazy" decoding="async" />
+                        <span class="sectLordExtras__runa" aria-hidden="true">ᚠ</span>
+                        <p class="sectLordExtras__lema">Lorem ipsum<br />dolor sit</p>
+                    </div>
+                    <div class="sectLordExtras__contenido">
+                        <p class="lordEyebrow">Antetítulo</p>
+                        <h2 class="lordTitulo" id="sr-extras">Lorem <em>ipsum</em></h2>
+                        <p class="sectLordExtras__intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="sectLordExtras__lista">
+                            <article class="sectLordExtras__item" aria-labelledby="sr-extra-1">
+                                <span class="sectLordExtras__numero" aria-hidden="true">01</span>
+                                <div>
+                                    <h3 id="sr-extra-1">Lorem ipsum</h3>
+                                    <p class="sectLordExtras__descripcion">Dolor sit amet consectetur</p>
+                                </div>
+                                <p class="sectLordExtras__precio">4,50 €</p>
+                            </article>
+                            <article class="sectLordExtras__item" aria-labelledby="sr-extra-2">
+                                <span class="sectLordExtras__numero" aria-hidden="true">02</span>
+                                <div>
+                                    <h3 id="sr-extra-2">Dolor sit</h3>
+                                    <p class="sectLordExtras__descripcion">Lorem ipsum dolor sit amet</p>
+                                </div>
+                                <p class="sectLordExtras__precio">3,50 €</p>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+                <p class="showroomLord__rotulo">sectLordParada</p>
+                <section class="sectLordParada" aria-labelledby="sr-parada">
+                    <p class="sectLordParada__linea" aria-hidden="true"><span></span>Lorem ipsum<span></span></p>
+                    <div class="sectLordParada__interior">
+                        <div class="sectLordParada__texto">
+                            <p class="lordEyebrow">Antetítulo</p>
+                            <h2 class="lordTitulo" id="sr-parada">Lorem<br />ipsum <em>dolor</em></h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <article class="sectLordParada__tarjeta" aria-labelledby="sr-destino">
+                            <p class="sectLordParada__fecha"><span>Lun — Mar</span><strong>01—02</strong><small>Mes</small></p>
+                            <div class="sectLordParada__info">
+                                <p class="sectLordParada__etiqueta">Etiqueta</p>
+                                <h3 id="sr-destino">Lorem ipsum</h3>
+                                <p>Dirección de ejemplo, 1 · Ciudad</p>
+                                <p class="sectLordParada__horario">Horario de ejemplo</p>
+                                <a class="lordEnlace" href="#showroom-lord" title="Enlace de ejemplo">Enlace <span class="lordFlecha" aria-hidden="true"></span></a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <p class="showroomLord__rotulo">sectLordOpiniones</p>
+                <section class="sectLordOpiniones" aria-labelledby="sr-opiniones">
+                    <div class="sectLordOpiniones__cabecera">
+                        <div>
+                            <p class="lordEyebrow">Antetítulo</p>
+                            <h2 class="lordTitulo" id="sr-opiniones">Lorem<br /><em>ipsum</em></h2>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div data-lord-carrusel data-intervalo="6500">
+                        <figure class="sectLordOpiniones__slide is-activa" data-lord-slide>
+                            <div class="sectLordOpiniones__avatar">
+                                <img src="<?= asset("assets/img/thelord/avatar-1.svg") ?>" width="160" height="160" alt="" />
+                                <span class="sectLordOpiniones__indice" aria-hidden="true">01 / 02</span>
+                            </div>
+                            <div class="sectLordOpiniones__cita">
+                                <p class="sectLordOpiniones__valoracion"><strong>4,5</strong> <span>sobre 5</span> <span class="sectLordOpiniones__estrellas" aria-hidden="true">★★★★★</span></p>
+                                <blockquote><p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.”</p></blockquote>
+                            </div>
+                            <figcaption><strong>Nombre de ejemplo</strong><span>Contexto · Ciudad</span></figcaption>
+                        </figure>
+                        <figure class="sectLordOpiniones__slide" data-lord-slide>
+                            <div class="sectLordOpiniones__avatar">
+                                <img src="<?= asset("assets/img/thelord/avatar-3.svg") ?>" width="160" height="160" alt="" />
+                                <span class="sectLordOpiniones__indice" aria-hidden="true">02 / 02</span>
+                            </div>
+                            <div class="sectLordOpiniones__cita">
+                                <p class="sectLordOpiniones__valoracion"><strong>4,8</strong> <span>sobre 5</span> <span class="sectLordOpiniones__estrellas" aria-hidden="true">★★★★★</span></p>
+                                <blockquote><p>“Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.”</p></blockquote>
+                            </div>
+                            <figcaption><strong>Otro nombre</strong><span>Contexto · Ciudad</span></figcaption>
+                        </figure>
+                        <div class="sectLordOpiniones__controles" role="group" aria-label="Seleccionar opinión de ejemplo">
+                            <button class="sectLordOpiniones__flecha" type="button" aria-label="Opinión anterior" data-lord-anterior><span aria-hidden="true">←</span></button>
+                            <div class="sectLordOpiniones__puntos">
+                                <button class="is-activa" type="button" aria-label="Ver opinión 1" aria-current="true" data-lord-punto></button>
+                                <button type="button" aria-label="Ver opinión 2" aria-current="false" data-lord-punto></button>
+                            </div>
+                            <button class="sectLordOpiniones__flecha" type="button" aria-label="Opinión siguiente" data-lord-siguiente><span aria-hidden="true">→</span></button>
+                        </div>
+                    </div>
+                </section>
+
+                <p class="showroomLord__rotulo">sectLordFaq</p>
+                <section class="sectLordFaq" aria-labelledby="sr-faq">
+                    <div class="sectLordFaq__intro">
+                        <p class="lordEyebrow">Antetítulo</p>
+                        <h2 class="lordTitulo" id="sr-faq">Lorem<br /><em>ipsum</em></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a class="lordBoton" href="#showroom-lord" title="Botón de ejemplo">Botón <span class="lordFlecha" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="sectLordFaq__lista" data-sect-lord-faq>
+                        <article class="sectLordFaq__item is-abierto">
+                            <h3>
+                                <button class="sectLordFaq__boton" type="button" id="sr-faq-boton-1" aria-expanded="true" aria-controls="sr-faq-respuesta-1">
+                                    <span class="sectLordFaq__numero" aria-hidden="true">01</span>
+                                    <span class="sectLordFaq__pregunta">¿Lorem ipsum dolor sit amet?</span>
+                                    <span class="sectLordFaq__icono" aria-hidden="true"></span>
+                                </button>
+                            </h3>
+                            <div class="sectLordFaq__respuesta" id="sr-faq-respuesta-1" role="region" aria-labelledby="sr-faq-boton-1">
+                                <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p></div>
+                            </div>
+                        </article>
+                        <article class="sectLordFaq__item">
+                            <h3>
+                                <button class="sectLordFaq__boton" type="button" id="sr-faq-boton-2" aria-expanded="false" aria-controls="sr-faq-respuesta-2">
+                                    <span class="sectLordFaq__numero" aria-hidden="true">02</span>
+                                    <span class="sectLordFaq__pregunta">¿Consectetur adipiscing elit?</span>
+                                    <span class="sectLordFaq__icono" aria-hidden="true"></span>
+                                </button>
+                            </h3>
+                            <div class="sectLordFaq__respuesta" id="sr-faq-respuesta-2" role="region" aria-labelledby="sr-faq-boton-2">
+                                <div><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p></div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <p class="showroomLord__rotulo">sectLordPasos</p>
+                <section class="sectLordPasos" aria-labelledby="sr-pasos">
+                    <div class="sectLordPasos__intro">
+                        <p class="lordEyebrow">Antetítulo</p>
+                        <h2 class="lordTitulo" id="sr-pasos">Lorem<br /><em>ipsum</em></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="sectLordPasos__grid">
+                        <article class="sectLordPasos__paso" aria-labelledby="sr-paso-1">
+                            <span class="sectLordPasos__numero" aria-hidden="true">01</span>
+                            <h3 class="sectLordPasos__titulo" id="sr-paso-1">Lorem</h3>
+                            <p class="sectLordPasos__texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </article>
+                        <article class="sectLordPasos__paso" aria-labelledby="sr-paso-2">
+                            <span class="sectLordPasos__numero" aria-hidden="true">02</span>
+                            <h3 class="sectLordPasos__titulo" id="sr-paso-2">Ipsum</h3>
+                            <p class="sectLordPasos__texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </article>
+                    </div>
+                </section>
+
+                <p class="showroomLord__rotulo">sectLordPasos--valores</p>
+                <section class="sectLordPasos sectLordPasos--valores" aria-labelledby="sr-valores">
+                    <h2 class="lordEyebrow" id="sr-valores">Antetítulo como H2</h2>
+                    <div class="sectLordPasos__grid">
+                        <article class="sectLordPasos__paso" aria-labelledby="sr-valor-1">
+                            <span class="sectLordPasos__numero" aria-hidden="true">01</span>
+                            <h3 class="sectLordPasos__titulo" id="sr-valor-1">Lorem</h3>
+                            <p class="sectLordPasos__texto">Lorem ipsum dolor sit amet.</p>
+                        </article>
+                        <article class="sectLordPasos__paso" aria-labelledby="sr-valor-2">
+                            <span class="sectLordPasos__numero" aria-hidden="true">02</span>
+                            <h3 class="sectLordPasos__titulo" id="sr-valor-2">Ipsum</h3>
+                            <p class="sectLordPasos__texto">Lorem ipsum dolor sit amet.</p>
+                        </article>
+                        <article class="sectLordPasos__paso" aria-labelledby="sr-valor-3">
+                            <span class="sectLordPasos__numero" aria-hidden="true">03</span>
+                            <h3 class="sectLordPasos__titulo" id="sr-valor-3">Dolor</h3>
+                            <p class="sectLordPasos__texto">Lorem ipsum dolor sit amet.</p>
+                        </article>
+                    </div>
+                </section>
+
+                <p class="showroomLord__rotulo">sectLordCta</p>
+                <section class="sectLordCta" aria-labelledby="sr-cta">
+                    <p class="sectLordCta__antetitulo">Lorem ipsum?</p>
+                    <h2 class="sectLordCta__titulo" id="sr-cta">Lorem ipsum dolor</h2>
+                    <a class="lordBoton lordBoton--oscuro" href="#showroom-lord" title="Botón de ejemplo">Botón <span class="lordFlecha" aria-hidden="true"></span></a>
+                </section>
+
+                <p class="showroomLord__rotulo">sectLordHistoria</p>
+                <section class="sectLordHistoria" aria-labelledby="sr-historia">
+                    <p class="sectLordHistoria__sello"><span>Lorem</span><strong>2000</strong><small>Ipsum</small></p>
+                    <div>
+                        <p class="lordEyebrow">Antetítulo</p>
+                        <h2 class="lordTitulo" id="sr-historia">Lorem ipsum.<br /><em>Dolor sit.</em></h2>
+                        <div class="sectLordHistoria__columnas">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <p class="showroomLord__rotulo">sectLordSplit--claro</p>
+                <section class="sectLordSplit sectLordSplit--claro" aria-labelledby="sr-split-claro">
+                    <img class="sectLordSplit__foto" src="<?= asset("assets/img/thelord/foodtruck.webp") ?>" width="1200" height="1100" alt="" loading="lazy" decoding="async" />
+                    <div class="sectLordSplit__texto">
+                        <p class="lordEyebrow">Antetítulo</p>
+                        <h2 class="lordTitulo" id="sr-split-claro">Lorem<br /><em>ipsum</em></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        <a class="lordBoton" href="#showroom-lord" title="Botón de ejemplo">Botón <span class="lordFlecha" aria-hidden="true"></span></a>
+                    </div>
+                </section>
+
+                <p class="showroomLord__rotulo">sectLordSplit (oscuro, con lista)</p>
+                <section class="sectLordSplit" aria-labelledby="sr-split">
+                    <img class="sectLordSplit__foto" src="<?= asset("assets/img/thelord/taberna.webp") ?>" width="1400" height="1400" alt="" loading="lazy" decoding="async" />
+                    <div class="sectLordSplit__texto">
+                        <p class="lordEyebrow">Antetítulo</p>
+                        <h2 class="lordTitulo" id="sr-split">Lorem<br /><em>ipsum</em></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <ul class="sectLordSplit__lista">
+                            <li>Lorem ipsum dolor</li>
+                            <li>Sit amet consectetur</li>
+                        </ul>
+                        <a class="lordBoton" href="#showroom-lord" title="Botón de ejemplo">Botón <span class="lordFlecha" aria-hidden="true"></span></a>
+                    </div>
+                </section>
+
+                <p class="showroomLord__rotulo">sectLordCalendario</p>
+                <section class="sectLordCalendario" aria-labelledby="sr-calendario">
+                    <div class="sectLordCalendario__intro">
+                        <p class="lordEyebrow">Antetítulo</p>
+                        <h2 class="lordTitulo" id="sr-calendario">Lorem<br /><em>ipsum</em></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="sectLordCalendario__lista">
+                        <article class="sectLordCalendario__fecha" aria-labelledby="sr-fecha-1">
+                            <span class="sectLordCalendario__numero" aria-hidden="true">01</span>
+                            <strong>01—02 ene</strong>
+                            <div class="sectLordCalendario__datos"><h3 id="sr-fecha-1">Lorem ipsum</h3><p>Ciudad</p></div>
+                            <small>Horario de ejemplo</small>
+                        </article>
+                        <article class="sectLordCalendario__fecha" aria-labelledby="sr-fecha-2">
+                            <span class="sectLordCalendario__numero" aria-hidden="true">02</span>
+                            <strong>03—04 feb</strong>
+                            <div class="sectLordCalendario__datos"><h3 id="sr-fecha-2">Dolor sit</h3><p>Ciudad</p></div>
+                            <small>Horario de ejemplo</small>
+                        </article>
+                    </div>
+                </section>
+
+                <p class="showroomLord__rotulo">sectLordFestivales</p>
+                <section class="sectLordFestivales" aria-labelledby="sr-festivales">
+                    <div class="sectLordFestivales__cabecera">
+                        <div>
+                            <p class="lordEyebrow">Antetítulo</p>
+                            <h2 class="lordTitulo" id="sr-festivales">Lorem<br /><em>ipsum</em></h2>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="sectLordFestivales__grid">
+                        <article class="sectLordFestivales__tarjeta" aria-labelledby="sr-festival-1">
+                            <div class="sectLordFestivales__imagen">
+                                <img src="<?= asset("assets/img/thelord/festival-catoira.webp") ?>" width="1400" height="1050" alt="Imagen de ejemplo" loading="lazy" decoding="async" />
+                                <span class="sectLordFestivales__anio">2000</span>
+                            </div>
+                            <div class="sectLordFestivales__texto">
+                                <p class="sectLordFestivales__lugar">Lugar · Provincia</p>
+                                <h3 id="sr-festival-1">Lorem ipsum</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </article>
+                        <article class="sectLordFestivales__tarjeta" aria-labelledby="sr-festival-2">
+                            <div class="sectLordFestivales__imagen">
+                                <img src="<?= asset("assets/img/thelord/festival-avila.webp") ?>" width="1000" height="750" alt="Imagen de ejemplo" loading="lazy" decoding="async" />
+                                <span class="sectLordFestivales__anio">2000</span>
+                            </div>
+                            <div class="sectLordFestivales__texto">
+                                <p class="sectLordFestivales__lugar">Lugar · Provincia</p>
+                                <h3 id="sr-festival-2">Dolor sit</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </article>
+                        <article class="sectLordFestivales__tarjeta" aria-labelledby="sr-festival-3">
+                            <div class="sectLordFestivales__imagen">
+                                <img src="<?= asset("assets/img/thelord/festival-clan.webp") ?>" width="1000" height="750" alt="Imagen de ejemplo" loading="lazy" decoding="async" />
+                                <span class="sectLordFestivales__anio">2000</span>
+                            </div>
+                            <div class="sectLordFestivales__texto">
+                                <p class="sectLordFestivales__lugar">Lugar</p>
+                                <h3 id="sr-festival-3">Amet consectetur</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <p class="showroomLord__rotulo">sectLordContacto (sin formulario en el catálogo)</p>
+                <section class="sectLordContacto" aria-labelledby="sr-contacto">
+                    <div class="sectLordContacto__detalles">
+                        <p class="lordEyebrow">Antetítulo</p>
+                        <h2 class="lordTitulo" id="sr-contacto">Lorem<br /><em>ipsum.</em></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <dl>
+                            <div class="sectLordContacto__dato"><dt>Correo</dt><dd><a href="mailto:info@example.com" title="Correo de ejemplo">info@example.com</a></dd></div>
+                            <div class="sectLordContacto__dato"><dt>Zona</dt><dd>Lorem ipsum</dd></div>
+                        </dl>
+                    </div>
+                </section>
+            </div>
         </main>
 
         <?php require app_path("includes/es/footer.php"); ?>
