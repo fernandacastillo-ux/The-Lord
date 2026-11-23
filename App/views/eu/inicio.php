@@ -15,7 +15,7 @@
             content="Sutan landutako hanburgesa artisauak, estetika bikingoko foodtruck batean. Ezagutu karta, Madrilgo gure hurrengo geldialdia eta nola kontratatu gaitzakezun."
         />
         <meta name="robots" content="index, follow" />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="website" />    
         <meta property="og:locale" content="eu_ES" />
         <meta property="og:site_name" content="THE LORD" />
         <meta property="og:title" content="THE LORD | Hanburgesa bikingoen foodtrucka Madrilen" />
