@@ -19,9 +19,6 @@ export default defineConfig({
             input: {
                 inicio: resolvePath("./src/assets/js/inicio.js"),
                 contacto: resolvePath("./src/assets/js/contacto.js"),
-                servicios: resolvePath("./src/assets/js/servicios.js"),
-                servicio1: resolvePath("./src/assets/js/servicio1.js"),
-                servicio2: resolvePath("./src/assets/js/servicio2.js"),
                 quienessomos: resolvePath("./src/assets/js/quienessomos.js"),
                 404: resolvePath("./src/assets/js/404.js"),
                 showroom: resolvePath("./src/assets/js/showroom.js"),
