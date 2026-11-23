@@ -1,0 +1,149 @@
+@use "config" as c;
+
+// Preguntas frecuentes: introducción con botón y acordeón numerado. JS: _sectLordFaq.js.
+// Sin JS las respuestas quedan visibles; el plegado solo se activa con .is-js.
+.sectLordFaq {
+    display: grid;
+    max-width: c.$lordAncho;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 85px c.$lordMargen;
+
+    @media only screen and (min-width: c.$lordMovil) {
+        padding: 130px 24px;
+    }
+
+    @media only screen and (min-width: c.$lordTablet) {
+        grid-template-columns: 0.75fr 1.25fr;
+        gap: 9vw;
+    }
+
+    &__intro > p {
+        max-width: 390px;
+        margin: 26px 0 32px;
+        color: c.$lordApagado;
+        line-height: 1.75;
+    }
+
+    &__lista {
+        border-top: 1px solid rgba(240, 234, 220, 0.14);
+    }
+
+    &__item {
+        border-bottom: 1px solid rgba(240, 234, 220, 0.14);
+    }
+
+    &__boton {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 30px 1fr 30px;
+        align-items: center;
+        gap: 12px;
+        padding: 25px 0;
+        color: c.$lordHueso;
+        text-align: left;
+        transition:
+            color 180ms ease,
+            padding 180ms ease;
+
+        @media only screen and (min-width: c.$lordMovil) {
+            grid-template-columns: 45px 1fr 30px;
+        }
+
+        &:hover {
+            padding-right: 8px;
+            padding-left: 8px;
+            color: c.$lordOro;
+        }
+    }
+
+    &__numero {
+        color: c.$lordOro;
+        font-family: c.$lordFuenteTitulos;
+        font-size: 10px;
+    }
+
+    &__pregunta {
+        font-family: c.$lordFuenteTitulos;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.4;
+    }
+
+    &__icono {
+        position: relative;
+        display: flex;
+        width: 28px;
+        height: 28px;
+        border: 1px solid rgba(240, 234, 220, 0.25);
+
+        &::before,
+        &::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 10px;
+            height: 1.5px;
+            background: c.$lordOro;
+            content: "";
+            transform: translate(-50%, -50%);
+            transition: transform 200ms ease;
+        }
+
+        &::after {
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
+    }
+
+    &__boton[aria-expanded="true"] &__icono::after {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    &__respuesta {
+        display: grid;
+        grid-template-rows: 1fr;
+
+        > div {
+            overflow: hidden;
+        }
+
+        p {
+            max-width: 620px;
+            padding: 0 30px 26px 42px;
+            color: c.$lordApagado;
+            font-size: 13px;
+            line-height: 1.75;
+
+            @media only screen and (min-width: c.$lordMovil) {
+                padding-left: 57px;
+            }
+        }
+
+        a {
+            color: c.$lordOro;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+    }
+
+    &__lista.is-js &__respuesta {
+        visibility: hidden;
+        grid-template-rows: 0fr;
+        opacity: 0;
+        transition:
+            grid-template-rows 300ms ease,
+            opacity 250ms ease,
+            visibility 0s linear 300ms;
+    }
+
+    &__lista.is-js &__item.is-abierto &__respuesta {
+        visibility: visible;
+        grid-template-rows: 1fr;
+        opacity: 1;
+        transition:
+            grid-template-rows 300ms ease,
+            opacity 250ms ease,
+            visibility 0s;
+    }
+}

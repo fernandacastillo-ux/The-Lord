@@ -1,28 +1,16 @@
-<footer class="footer01">
-    <div class="footer01__inner">
-        <section class="footer01__column">
-            <h2 class="footer01__title">Navegación</h2>
-            <?php
-            $idSubmenu = "footer-servicios-es";
-            require app_path("includes/es/enlaces.php");
-            ?>
-        </section>
-        <section class="footer01__column">
-            <h2 class="footer01__title">Lorem ipsum</h2>
-            <p class="footer01__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.
-            </p>
-        </section>
-        <section class="footer01__column">
-            <h2 class="footer01__title">Contacto</h2>
-            <a class="footer01__link" href="<?= url("/es/contacto") ?>">Lorem ipsum</a>
-        </section>
+<footer class="footerLord">
+    <div class="footerLord__marca">
+        <span class="lordRuna footerLord__runa" aria-hidden="true"></span>
+        <p class="footerLord__nombre">THE LORD</p>
+        <p class="footerLord__lema">Cocina sobre ruedas · Madrid</p>
     </div>
-    <div class="footer01__bottom">
-        <p>
-            Stack formación &copy;
-            <?= date("Y") ?>
-        </p>
+
+    <nav aria-label="Navegación del pie">
+        <?php require app_path("includes/es/enlaces.php"); ?>
+    </nav>
+
+    <div class="footerLord__base">
+        <p>&copy; <?= date("Y") ?> THE LORD · Todos los derechos reservados</p>
+        <p>Hecho con fuego en Madrid</p>
     </div>
 </footer>

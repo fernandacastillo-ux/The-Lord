@@ -1,0 +1,63 @@
+@use "config" as c;
+
+// Historia: sello con año y lugar, título y texto a dos columnas.
+.sectLordHistoria {
+    display: grid;
+    max-width: c.$lordAncho;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 85px c.$lordMargen;
+
+    @media only screen and (min-width: c.$lordMovil) {
+        grid-template-columns: 190px 1fr;
+        gap: 7vw;
+        padding: 130px 24px;
+    }
+
+    &__sello {
+        display: flex;
+        width: 180px;
+        height: 230px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(216, 166, 48, 0.35);
+
+        @media only screen and (min-width: c.$lordMovil) {
+            width: auto;
+        }
+
+        span,
+        small {
+            color: c.$lordOro;
+            font-size: 8px;
+            font-weight: 800;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        strong {
+            margin: 7px 0;
+            font-family: c.$lordFuenteTitulos;
+            font-size: 39px;
+        }
+    }
+
+    &__columnas {
+        display: grid;
+        margin-top: 40px;
+        grid-template-columns: 1fr;
+        gap: 20px;
+
+        @media only screen and (min-width: c.$lordMovil) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+        }
+
+        p {
+            color: c.$lordApagado;
+            line-height: 1.8;
+        }
+    }
+}

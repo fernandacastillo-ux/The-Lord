@@ -1,0 +1,154 @@
+@use "config" as c;
+
+// Sección dorada con la próxima ubicación: texto y tarjeta oscura con fecha y mapa.
+.sectLordParada {
+    @include c.lordContenedor(25px);
+    position: relative;
+    display: block;
+    padding-bottom: 75px;
+    background: c.$lordOro;
+    color: c.$lordTinta;
+    scroll-margin-top: 80px;
+
+    @media only screen and (min-width: c.$lordMovil) {
+        padding-top: 28px;
+        padding-bottom: 100px;
+    }
+
+    &__linea {
+        display: flex;
+        margin-bottom: 60px;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        font-family: c.$lordFuenteTitulos;
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+
+        span {
+            width: 50px;
+            height: 1px;
+            background: c.$lordTinta;
+        }
+    }
+
+    &__interior {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: end;
+        gap: 45px;
+
+        @media only screen and (min-width: c.$lordTablet) {
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 8vw;
+        }
+    }
+
+    &__texto {
+        .lordEyebrow,
+        em {
+            color: c.$lordOxidoOscuro;
+        }
+
+        p:last-child {
+            max-width: 420px;
+            margin-top: 25px;
+            color: #4f3b20;
+            line-height: 1.7;
+        }
+    }
+
+    &__tarjeta {
+        display: grid;
+        grid-template-columns: 1fr;
+        background: c.$lordTinta;
+        color: c.$lordHueso;
+        transition:
+            transform 250ms ease,
+            box-shadow 250ms ease;
+
+        @media only screen and (min-width: c.$lordMovil) {
+            grid-template-columns: 155px 1fr;
+        }
+
+        &:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 22px 45px rgba(76, 42, 4, 0.22);
+        }
+    }
+
+    &__fecha {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        border-bottom: 1px solid rgba(240, 234, 220, 0.14);
+        padding: 20px;
+
+        @media only screen and (min-width: c.$lordMovil) {
+            flex-direction: column;
+            gap: 0;
+            border-right: 1px solid rgba(240, 234, 220, 0.14);
+            border-bottom: 0;
+            padding: 32px 24px;
+        }
+
+        span,
+        small {
+            color: c.$lordOro;
+            font-size: 8px;
+            font-weight: 800;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        strong {
+            font-family: c.$lordFuenteTitulos;
+            font-size: 25px;
+
+            @media only screen and (min-width: c.$lordMovil) {
+                margin: 7px 0 2px;
+                font-size: 34px;
+            }
+        }
+    }
+
+    &__info {
+        padding: 28px 24px;
+
+        @media only screen and (min-width: c.$lordMovil) {
+            padding: 32px 38px;
+        }
+
+        h3 {
+            margin: 8px 0;
+            font-family: c.$lordFuenteTitulos;
+            font-size: 23px;
+        }
+
+        p {
+            color: #a9a397;
+            font-size: 13px;
+        }
+
+        .lordEnlace {
+            color: c.$lordOro;
+        }
+    }
+
+    &__etiqueta {
+        color: c.$lordOro !important;
+        font-size: 8px !important;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+    }
+
+    &__horario {
+        margin: 16px 0 20px;
+        color: #8a867d !important;
+        font-size: 11px !important;
+    }
+}

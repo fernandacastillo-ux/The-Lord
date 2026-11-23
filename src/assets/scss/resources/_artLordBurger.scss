@@ -1,0 +1,166 @@
+@use "config" as c;
+
+// Tarjeta de hamburguesa: foto con índice y etiqueta, nombre, precio y descripción.
+// Variante --detallada: foto a la izquierda y lista de ingredientes en lugar del enlace.
+.artLordBurger {
+    position: relative;
+    display: block;
+    background: c.$lordPergaminoClaro;
+    color: c.$lordTinta;
+    scroll-margin-top: 110px;
+    transform-origin: center bottom;
+    transition:
+        transform 300ms cubic-bezier(0.2, 0.75, 0.25, 1),
+        box-shadow 300ms ease;
+
+    @media only screen and (min-width: c.$lordMovil) and (max-width: 900px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &:hover {
+        z-index: 2;
+        transform: translateY(-10px) rotate(-0.35deg);
+        box-shadow: 0 24px 50px rgba(23, 19, 12, 0.16);
+    }
+
+    &:nth-child(even):hover {
+        transform: translateY(-10px) rotate(0.35deg);
+    }
+
+    &__foto {
+        position: relative;
+        height: 300px;
+        overflow: hidden;
+        background: #1a1916;
+
+        @media only screen and (min-width: c.$lordMovil) {
+            height: 320px;
+        }
+
+        @media only screen and (min-width: c.$lordTablet) {
+            height: 360px;
+        }
+
+        &::after {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.15), transparent 50%, rgba(0, 0, 0, 0.55));
+            content: "";
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: saturate(0.8);
+            transition: transform 600ms ease;
+        }
+    }
+
+    &:hover &__foto img {
+        transform: scale(1.04);
+    }
+
+    &__indice,
+    &__etiqueta {
+        position: absolute;
+        z-index: 1;
+    }
+
+    &__indice {
+        top: 20px;
+        left: 20px;
+        color: white;
+        font-family: c.$lordFuenteTitulos;
+        font-size: 11px;
+    }
+
+    &__etiqueta {
+        right: 0;
+        bottom: 0;
+        padding: 8px 13px;
+        background: c.$lordOro;
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 25px 25px 28px;
+    }
+
+    &__fila {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    &__nombre {
+        font-family: c.$lordFuenteTitulos;
+        font-size: 24px;
+        font-weight: 800;
+    }
+
+    &__precio {
+        flex-shrink: 0;
+        color: c.$lordOxido;
+        font-family: c.$lordFuenteTitulos;
+        font-size: 21px;
+        font-weight: 700;
+
+        small {
+            font-size: 12px;
+        }
+    }
+
+    &__descripcion {
+        margin: 13px 0 20px;
+        color: #6b665c;
+        font-size: 13px;
+        line-height: 1.7;
+
+        @media only screen and (min-width: c.$lordMovil) {
+            min-height: 70px;
+        }
+    }
+
+    &__ingredientes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        border-top: 1px solid #d7d0c3;
+        padding-top: 18px;
+
+        li {
+            border: 1px solid #d2cabd;
+            padding: 6px 9px;
+            color: #686258;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+    }
+
+    &--detallada {
+        @media only screen and (min-width: c.$lordMovil) {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+        }
+    }
+
+    &--detallada &__foto {
+        min-height: 310px;
+
+        @media only screen and (min-width: c.$lordMovil) {
+            height: 100%;
+            min-height: 390px;
+        }
+    }
+}

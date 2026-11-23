@@ -1,0 +1,192 @@
+@use "config" as c;
+
+// Contacto: datos directos y formulario claro. El formulario mantiene los IDs y campos de
+// artForm02 para reutilizar su JS (_artForm02.js) y su controlador POST.
+.sectLordContacto {
+    display: grid;
+    max-width: c.$lordAncho;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    gap: 60px;
+    padding: 80px c.$lordMargen;
+
+    @media only screen and (min-width: c.$lordMovil) {
+        padding: 120px 24px;
+    }
+
+    @media only screen and (min-width: c.$lordTablet) {
+        grid-template-columns: 0.75fr 1.25fr;
+        gap: 9vw;
+    }
+
+    &__detalles > p {
+        margin: 25px 0 45px;
+        color: c.$lordApagado;
+        line-height: 1.8;
+    }
+
+    &__dato {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        border-top: 1px solid rgba(240, 234, 220, 0.14);
+        padding: 19px 0;
+
+        dt {
+            color: c.$lordOro;
+            font-size: 8px;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        dd,
+        a {
+            color: c.$lordHueso;
+            font-family: c.$lordFuenteTitulos;
+            font-size: 17px;
+        }
+
+        a:hover {
+            color: c.$lordOro;
+        }
+    }
+
+    &__formulario {
+        position: relative;
+        padding: clamp(28px, 5vw, 60px);
+        background: c.$lordPergamino;
+        color: c.$lordTinta;
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 9px;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        input:not([type="checkbox"]),
+        textarea {
+            display: block;
+            width: 100%;
+            margin-bottom: 22px;
+            border: 1px solid #c8c0b2;
+            padding: 15px;
+            background: #f5efe5;
+            color: c.$lordTinta;
+            font-family: c.$lordFuenteTextos;
+            font-size: 13px;
+
+            &:focus {
+                border-color: c.$lordOxido;
+                outline: 2px solid rgba(141, 46, 28, 0.25);
+            }
+        }
+
+        textarea {
+            min-height: 160px;
+            resize: vertical;
+        }
+
+        .error {
+            min-height: 1px;
+            margin-bottom: 12px;
+            color: c.$lordOxido;
+            font-size: 13px;
+            font-weight: 600;
+        }
+    }
+
+    &__fila {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        @media only screen and (min-width: c.$lordMovil) {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 20px;
+        }
+    }
+
+    &__check {
+        display: flex;
+        margin-bottom: 22px;
+        align-items: flex-start;
+        gap: 9px;
+
+        input {
+            margin-top: 2px;
+            accent-color: c.$lordOxido;
+        }
+
+        label {
+            margin: 0;
+            color: c.$lordTextoClaro;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            line-height: 1.5;
+            text-transform: none;
+        }
+    }
+
+    &__captcha {
+        display: flex;
+        margin-bottom: 26px;
+        align-items: center;
+        gap: 10px;
+
+        span {
+            font-family: c.$lordFuenteTitulos;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        input:not([type="checkbox"]) {
+            width: 110px;
+            margin: 0 0 0 6px;
+        }
+    }
+
+    &__enviar {
+        align-self: flex-start;
+    }
+
+    #modal_envio {
+        display: none;
+        min-height: 300px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 16px;
+
+        h3 {
+            font-family: c.$lordFuenteTitulos;
+            font-size: 28px;
+            font-weight: 900;
+        }
+
+        p {
+            color: c.$lordTextoClaro;
+            line-height: 1.7;
+        }
+    }
+
+    .moduloLoader01 {
+        display: none;
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        left: 50%;
+        width: 70px;
+        height: 70px;
+        color: c.$lordOxido;
+        transform: translate(-50%, -50%);
+    }
+}

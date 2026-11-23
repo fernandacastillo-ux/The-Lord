@@ -1,33 +1,24 @@
 <?php
 // Listado compartido por el nav y el footer en castellano.
 // Cada href coincide con una ruta definida en App/config/config.php.
+$rutaActual = $url ?? "";
 ?>
-<ul class="enlaces01">
-    <li class="enlaces01__item">
-        <a class="enlaces01__link" href="<?= url("/es") ?>" title="Lorem ipsum">
-            <img class="enlaces01__icon" src="<?= asset("assets/img/icons/home.svg") ?>" alt="" title="" aria-hidden="true" />
-            <span>Inicio</span>
-        </a>
+<ul class="enlacesLord">
+    <li>
+        <a class="enlacesLord__link" href="<?= url("/es") ?>" title="Ir al inicio de THE LORD"<?= $rutaActual === "/es" ? ' aria-current="page"' : "" ?>>Inicio</a>
     </li>
-
-    <li class="enlaces01__item">
-        <a class="enlaces01__link" href="<?= url("/es/contacto") ?>" title="Lorem ipsum">
-            <img class="enlaces01__icon" src="<?= asset("assets/img/icons/email.svg") ?>" alt="" title="" aria-hidden="true" />
-            <span>Contacto</span>
-        </a>
+    <li>
+        <a class="enlacesLord__link" href="<?= url("/es/hamburguesas") ?>" title="Ver la carta de hamburguesas"<?= $rutaActual === "/es/hamburguesas" ? ' aria-current="page"' : "" ?>>Hamburguesas</a>
     </li>
-
-    <li class="enlaces01__item">
-        <a class="enlaces01__link" href="<?= url("/es/quienessomos") ?>" title="Lorem ipsum">
-            <img class="enlaces01__icon" src="<?= asset("assets/img/icons/persons.svg") ?>" alt="" title="" aria-hidden="true" />
-            <span>Quiénes somos</span>
-        </a>
+    <li>
+        <a class="enlacesLord__link" href="<?= url("/es/quienes-somos") ?>" title="Conocer la historia de THE LORD"<?= $rutaActual === "/es/quienes-somos" ? ' aria-current="page"' : "" ?>>Quiénes somos</a>
     </li>
-
-    <li class="enlaces01__item">
-        <a class="enlaces01__link" href="<?= url("/showroom") ?>" title="Lorem ipsum">
-            <img class="enlaces01__icon" src="<?= asset("assets/img/icons/grid.svg") ?>" alt="" title="" aria-hidden="true" />
-            <span>Showroom</span>
+    <li>
+        <a class="enlacesLord__link" href="<?= url("/es/nuestra-ruta") ?>" title="Consultar las próximas paradas del foodtruck"<?= $rutaActual === "/es/nuestra-ruta" ? ' aria-current="page"' : "" ?>>Nuestra ruta</a>
+    </li>
+    <li>
+        <a class="enlacesLord__link enlacesLord__link--cta" href="<?= url("/es/contacto") ?>" title="Contactar con THE LORD"<?= $rutaActual === "/es/contacto" ? ' aria-current="page"' : "" ?>>
+            Contacto <span class="lordFlecha" aria-hidden="true"></span>
         </a>
     </li>
 </ul>

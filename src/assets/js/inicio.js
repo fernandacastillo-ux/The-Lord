@@ -3,4 +3,10 @@ import "../scss/inicio.scss";
 
 import "./resources/_global.js";
 
-import "./resources/_artForm02.js";
+import { lordCarrusel } from "./resources/_lordCarrusel.js";
+import { sectLordFaq } from "./resources/_sectLordFaq.js";
+
+document.addEventListener("DOMContentLoaded", () => {
+    lordCarrusel();
+    sectLordFaq();
+});

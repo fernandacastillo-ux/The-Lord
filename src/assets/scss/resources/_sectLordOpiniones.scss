@@ -1,0 +1,234 @@
+@use "config" as c;
+
+// Sección clara con carrusel de opiniones: avatar, valoración, cita y autoría. JS: _lordCarrusel.js.
+.sectLordOpiniones {
+    @include c.lordContenedor(80px);
+    display: block;
+    background: c.$lordPergamino;
+    color: c.$lordTinta;
+
+    @media only screen and (min-width: c.$lordMovil) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    &__cabecera {
+        display: flex;
+        margin-bottom: 55px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+
+        @media only screen and (min-width: c.$lordMovil) {
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        > p {
+            max-width: 440px;
+            color: c.$lordTextoClaro;
+            line-height: 1.75;
+        }
+    }
+
+    &__slide {
+        display: grid;
+        grid-template-columns: 1fr;
+        background: c.$lordTinta;
+        color: c.$lordHueso;
+        animation: sectLordOpiniones-entra 600ms ease both;
+
+        @media only screen and (min-width: c.$lordTablet) {
+            min-height: 480px;
+            grid-template-columns: 330px 1fr;
+            grid-template-rows: 1fr auto;
+        }
+
+        &:not(.is-activa) {
+            display: none;
+        }
+    }
+
+    &__avatar {
+        position: relative;
+        display: flex;
+        min-height: 280px;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid c.$lordLinea;
+        background: radial-gradient(circle at center, rgba(216, 166, 48, 0.16), transparent 50%), c.$lordCarbon;
+
+        @media only screen and (min-width: c.$lordTablet) {
+            grid-row: 1 / span 2;
+            border-right: 1px solid c.$lordLinea;
+            border-bottom: 0;
+        }
+
+        &::before {
+            position: absolute;
+            color: rgba(216, 166, 48, 0.06);
+            font-family: c.$lordFuenteTitulos;
+            font-size: 310px;
+            content: "ᚠ";
+        }
+
+        img {
+            position: relative;
+            z-index: 1;
+            width: 165px;
+            height: auto;
+
+            @media only screen and (min-width: c.$lordMovil) {
+                width: 190px;
+            }
+        }
+    }
+
+    &__indice {
+        position: absolute;
+        z-index: 1;
+        bottom: 22px;
+        color: c.$lordOro;
+        font-family: c.$lordFuenteTitulos;
+        font-size: 10px;
+        letter-spacing: 0.18em;
+    }
+
+    &__cita {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px 24px 0;
+
+        @media only screen and (min-width: c.$lordMovil) {
+            padding: clamp(40px, 6vw, 85px) clamp(40px, 6vw, 85px) 0;
+        }
+
+        blockquote p {
+            font-family: c.$lordFuenteTitulos;
+            font-size: clamp(19px, 2.2vw, 29px);
+            line-height: 1.55;
+        }
+    }
+
+    &__valoracion {
+        display: flex;
+        margin-bottom: 24px;
+        align-items: baseline;
+        gap: 9px;
+
+        @media only screen and (min-width: c.$lordMovil) {
+            margin-bottom: 35px;
+        }
+
+        strong {
+            color: c.$lordOro;
+            font-family: c.$lordFuenteTitulos;
+            font-size: 31px;
+        }
+
+        span {
+            color: #8a867d;
+            font-size: 9px;
+            text-transform: uppercase;
+        }
+
+        .sectLordOpiniones__estrellas {
+            margin-left: auto;
+            color: c.$lordOro;
+            font-size: 10px;
+            letter-spacing: 0.16em;
+        }
+    }
+
+    figcaption {
+        display: flex;
+        margin: 38px 24px 40px;
+        flex-direction: column;
+        border-top: 1px solid c.$lordLinea;
+        padding-top: 22px;
+
+        @media only screen and (min-width: c.$lordMovil) {
+            margin: 38px clamp(40px, 6vw, 85px) clamp(40px, 6vw, 85px);
+        }
+
+        strong {
+            color: c.$lordOro;
+            font-size: 10px;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+        }
+
+        span {
+            margin-top: 5px;
+            color: #8a867d;
+            font-size: 10px;
+        }
+    }
+
+    &__controles {
+        display: flex;
+        margin-top: 24px;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    &__flecha {
+        width: 38px;
+        height: 38px;
+        border: 1px solid #b9b1a3 !important;
+        color: c.$lordTinta !important;
+        transition:
+            color 180ms ease,
+            border-color 180ms ease,
+            transform 180ms ease;
+
+        &:hover {
+            border-color: c.$lordOxido !important;
+            color: c.$lordOxido !important;
+            transform: scale(1.08);
+        }
+    }
+
+    &__puntos {
+        display: flex;
+        gap: 7px;
+
+        button {
+            position: relative;
+            width: 28px;
+            height: 2px;
+            padding: 0;
+            background: #b9b1a3;
+            transition:
+                background 180ms ease,
+                width 180ms ease;
+
+            &::before {
+                position: absolute;
+                inset: -10px -2px;
+                content: "";
+            }
+
+            &.is-activa {
+                width: 42px;
+                background: c.$lordOxido;
+            }
+        }
+    }
+}
+
+@keyframes sectLordOpiniones-entra {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}

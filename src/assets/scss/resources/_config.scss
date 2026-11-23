@@ -43,6 +43,40 @@ $desktop: 1200px;
 $padMin: 1.5rem;
 $padMax: 3rem;
 
+// Variables de marca THE LORD (diseño Figma Make "Foodtruck Vikingo de Hamburguesas").
+// Las usan los recursos *Lord; las fuentes se cargan desde Google Fonts en cada vista.
+$lordFuenteTitulos: "Cinzel", Georgia, serif;
+$lordFuenteTextos: "DM Sans", Arial, sans-serif;
+
+$lordTinta: #0b0b0a;
+$lordCarbon: #121210;
+$lordCarbonClaro: #151512;
+$lordHueso: #f0eadc;
+$lordApagado: #a8a293;
+$lordOro: #d8a630;
+$lordOroVivo: #efbd3b;
+$lordOxido: #8d2e1c;
+$lordOxidoOscuro: #722416;
+$lordPergamino: #e9e2d3;
+$lordPergaminoClaro: #f6f1e8;
+$lordTextoClaro: #625d53;
+$lordLinea: rgba(240, 234, 220, 0.13);
+
+$lordMovil: 621px;
+$lordTablet: 901px;
+$lordAncho: 1280px;
+$lordMargen: 20px;
+
+// Relleno lateral que centra el contenido en $lordAncho sin limitar el fondo de la sección.
+@mixin lordContenedor($vertical: 0) {
+    padding: $vertical max(#{$lordMargen}, calc((100vw - #{$lordAncho}) / 2));
+
+    @media only screen and (min-width: $lordMovil) {
+        padding-left: max(24px, calc((100vw - #{$lordAncho}) / 2));
+        padding-right: max(24px, calc((100vw - #{$lordAncho}) / 2));
+    }
+}
+
 html {
     scroll-behavior: smooth;
 

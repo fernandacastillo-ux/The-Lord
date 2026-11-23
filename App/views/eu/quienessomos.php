@@ -2,213 +2,144 @@
 <html lang="eu">
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/svg+xml" href="<?= asset("favicon.svg") ?>" />
-        <link rel="canonical" href="<?= e(app_url("/eu/quienessomos")) ?>" />
-        <link rel="alternate" hreflang="es" href="<?= e(app_url("/es/quienessomos")) ?>" />
-        <link rel="alternate" hreflang="eu" href="<?= e(app_url("/eu/quienessomos")) ?>" />
-        <link rel="alternate" hreflang="x-default" href="<?= e(app_url("/es/quienessomos")) ?>" />
-        <title>Nortzuk gara | Stack formación</title>
-        <meta name="description" content="Lorem ipsum dolor sit amet" />
+        <link rel="canonical" href="<?= e(app_url("/eu/nor-gara")) ?>" />
+        <link rel="alternate" hreflang="es" href="<?= e(app_url("/es/quienes-somos")) ?>" />
+        <link rel="alternate" hreflang="eu" href="<?= e(app_url("/eu/nor-gara")) ?>" />
+        <link rel="alternate" hreflang="x-default" href="<?= e(app_url("/es/quienes-somos")) ?>" />
+        <title>Nor gara: foodtruck bikingoaren historia | THE LORD</title>
+        <meta
+            name="description"
+            content="2019an jaio ginen Madrilen, mailegatutako plantxa baten inguruan. Ezagutu THE LORD izenaren jatorria, gurpilen gaineko gure bizitza eta klanaren balioak."
+        />
         <meta name="robots" content="index, follow" />
-        <meta property="og:type" content="profile" />
+        <meta property="og:type" content="website" />
         <meta property="og:locale" content="eu_ES" />
-        <meta property="og:site_name" content="Lorem ipsum dolor sit amet" />
-        <meta property="og:title" content="Lorem ipsum dolor sit amet" />
-        <meta property="og:description" content="Lorem ipsum dolor sit amet" />
-        <meta property="og:url" content="<?= e(app_url("/eu/quienessomos")) ?>" />
-        <meta property="og:image" content="<?= e(app_url("assets/img/views/matrix-5.webp")) ?>" />
+        <meta property="og:site_name" content="THE LORD" />
+        <meta property="og:title" content="Nor gara: foodtruck bikingoaren historia | THE LORD" />
+        <meta
+            property="og:description"
+            content="2019an jaio ginen Madrilen, mailegatutako plantxa baten inguruan. Ezagutu THE LORD izenaren jatorria, gurpilen gaineko gure bizitza eta klanaren balioak."
+        />
+        <meta property="og:url" content="<?= e(app_url("/eu/nor-gara")) ?>" />
+        <meta property="og:image" content="<?= e(app_url("assets/img/thelord/cabecera-quienes-somos.webp")) ?>" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Lorem ipsum dolor sit amet" />
-        <meta name="twitter:description" content="Lorem ipsum dolor sit amet" />
-        <meta name="twitter:image" content="<?= e(app_url("assets/img/views/matrix-5.webp")) ?>" />
+        <meta name="twitter:title" content="Nor gara: foodtruck bikingoaren historia | THE LORD" />
+        <meta
+            name="twitter:description"
+            content="2019an jaio ginen Madrilen, mailegatutako plantxa baten inguruan. Ezagutu THE LORD izenaren jatorria, gurpilen gaineko gure bizitza eta klanaren balioak."
+        />
+        <meta name="twitter:image" content="<?= e(app_url("assets/img/thelord/cabecera-quienes-somos.webp")) ?>" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap"
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <?= vite_tags($route["resources"] ?? null) ?>
         <?php require app_path("includes/cookielad.php"); ?>
     </head>
-    <body>
+    <body class="lord">
         <?php require app_path("includes/eu/nav.php"); ?>
 
-        <header class="header02">
+        <header class="headerLord">
             <img
-                class="header02__media"
-                src="<?= asset("assets/img/views/matrix-5.webp") ?>"
-                width="480"
-                height="207"
-                alt="Matrix"
-                title="Lorem ipsum"
+                class="headerLord__fondo"
+                src="<?= asset("assets/img/thelord/cabecera-quienes-somos.webp") ?>"
+                width="1800"
+                height="1000"
+                alt=""
                 fetchpriority="high"
                 decoding="async"
             />
-            <div class="header02__content">
-                <p class="header02__eyebrow">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.
+            <div class="headerLord__contenido">
+                <p class="lordEyebrow">Nor gara</p>
+                <h1 class="headerLord__titulo">Suaren jaun<br /><em>izateko jaio ginen.</em></h1>
+                <p class="headerLord__texto">
+                    Sukalde txiki bat, asmo handi bat eta errepidea etxe gisa. Hau da THE LORDen historia.
                 </p>
-                <h1 class="header02__title">Nortzuk gara</h1>
-                <p class="header02__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.
-                </p>
-                <a href="<?= url("/eu/contacto") ?>" class="boton" title="Lorem ipsum">Lorem ipsum dolor sit amet</a>
             </div>
         </header>
 
-        <main>
-            <section aria-labelledby="equipo-intro-eu">
-                <article class="art14">
-                    <div class="content">
-                        <div class="h2Especial">
-                            <span aria-hidden="true"></span>
-                            <h2 id="equipo-intro-eu">Lorem ipsum dolor sit amet</h2>
-                        </div>
-                        <h3>Lorem ipsum dolor sit amet</h3>
+        <main id="contenido">
+            <section class="sectLordHistoria" aria-labelledby="historia-titulo-eu">
+                <p class="sectLordHistoria__sello">
+                    <span>Noiztik</span>
+                    <strong>2019</strong>
+                    <small>Madril</small>
+                </p>
+                <div>
+                    <p class="lordEyebrow">Izenaren jatorria</p>
+                    <h2 class="lordTitulo" id="historia-titulo-eu">Ez da titulu bat.<br /><em>Hitzarmen bat da.</em></h2>
+                    <div class="sectLordHistoria__columnas">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
+                            THE LORD mailegatutako plantxa baten inguruan jaio zen, lagunen arteko udako gau batean.
+                            Lehen errezeta dastatzean, norbaitek hanburgesa altxatu eta esan zuen: «Honek beste guztiaren
+                            gainetik agintzen du». Esaldia geratu zen; izena ere bai.
                         </p>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
+                            Estetika bikingoa aukeratu genuen ofizioa nola ulertzen dugun adierazten duelako: sortzeko
+                            ausardia, produktuarekiko errespetua eta batera aurrera egiten duen klana. Ez dugu koroarik
+                            bilatzen. Zerbitzu bakoitzean irabazi nahi dugu titulua.
                         </p>
-                        <img
-                            src="<?= asset("assets/img/views/matrix-6.webp") ?>"
-                            width="480"
-                            height="207"
-                            alt="Matrix"
-                            title="Lorem ipsum"
-                            loading="lazy"
-                            decoding="async"
-                        />
                     </div>
-                </article>
+                </div>
             </section>
 
-            <section aria-labelledby="equipo-metodo-eu">
-                <div class="h2Especial">
-                    <span aria-hidden="true"></span>
-                    <h2 id="equipo-metodo-eu">Lorem ipsum dolor sit amet</h2>
+            <section class="sectLordSplit sectLordSplit--claro" aria-labelledby="ruedas-titulo-eu">
+                <img
+                    class="sectLordSplit__foto"
+                    src="<?= asset("assets/img/thelord/foodtruck.webp") ?>"
+                    width="1200"
+                    height="1100"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                />
+                <div class="sectLordSplit__texto">
+                    <p class="lordEyebrow">Gure bizitza gurpilen gainean</p>
+                    <h2 class="lordTitulo" id="ruedas-titulo-eu">Mugarik gabeko<br /><em>jatetxea</em></h2>
+                    <p>
+                        Auzoetako merkatuak zeharkatzen hasi ginen, hiru hanburgesako karta batekin eta ibilgailuan
+                        ozta-ozta sartzen zen plantxa batekin. Gaur egun jaialdietan, ospakizunetan eta topaketa
+                        gastronomikoetan sukaldatzen dugu Espainia osoan.
+                    </p>
+                    <p>
+                        Sukaldaritza ibiltariaren munduko parte izateak esan nahi du astero mahai desberdin batera
+                        iristea, pertsona berriak ezagutzea eta edozein aparkaleku bizitzaz betetako jantoki bihurtzea.
+                    </p>
+                    <a class="lordBoton" href="<?= url("/eu/harremanetan") ?>" title="THE LORD ekitaldi baterako kontratatu">
+                        Gonbidatu gaitzazu zure ekitaldira <span class="lordFlecha" aria-hidden="true"></span>
+                    </a>
                 </div>
-                <article class="art09">
-                    <h3>Lorem ipsum dolor sit amet</h3>
-                    <div class="art09-content">
-                        <div class="contenedor-lista">
-                            <h4>Lorem ipsum dolor sit amet</h4>
-                            <ul>
-                                <li>
-                                    <img src="<?= asset("assets/img/icons/checkmark-circle.svg") ?>" alt="" title="" aria-hidden="true" /><span
-                                        >Lorem ipsum dolor sit amet</span
-                                    >
-                                </li>
-                                <li>
-                                    <img src="<?= asset("assets/img/icons/checkmark-circle.svg") ?>" alt="" title="" aria-hidden="true" /><span
-                                        >Lorem ipsum dolor sit amet</span
-                                    >
-                                </li>
-                                <li>
-                                    <img src="<?= asset("assets/img/icons/checkmark-circle.svg") ?>" alt="" title="" aria-hidden="true" /><span
-                                        >Lorem ipsum dolor sit amet</span
-                                    >
-                                </li>
-                                <li>
-                                    <img src="<?= asset("assets/img/icons/checkmark-circle.svg") ?>" alt="" title="" aria-hidden="true" /><span
-                                        >Lorem ipsum dolor sit amet</span
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="contenedor-lista">
-                            <h4>Lorem ipsum dolor sit amet</h4>
-                            <ul>
-                                <li>
-                                    <img src="<?= asset("assets/img/icons/checkmark-circle.svg") ?>" alt="" title="" aria-hidden="true" /><span
-                                        >Lorem ipsum dolor sit amet</span
-                                    >
-                                </li>
-                                <li>
-                                    <img src="<?= asset("assets/img/icons/checkmark-circle.svg") ?>" alt="" title="" aria-hidden="true" /><span
-                                        >Lorem ipsum dolor sit amet</span
-                                    >
-                                </li>
-                                <li>
-                                    <img src="<?= asset("assets/img/icons/checkmark-circle.svg") ?>" alt="" title="" aria-hidden="true" /><span
-                                        >Lorem ipsum dolor sit amet</span
-                                    >
-                                </li>
-                                <li>
-                                    <img src="<?= asset("assets/img/icons/checkmark-circle.svg") ?>" alt="" title="" aria-hidden="true" /><span
-                                        >Lorem ipsum dolor sit amet</span
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
             </section>
 
-            <section aria-labelledby="equipo-oficios-eu">
-                <div class="h2Especial">
-                    <span aria-hidden="true"></span>
-                    <h2 id="equipo-oficios-eu">Lorem ipsum dolor sit amet</h2>
+            <section class="sectLordPasos sectLordPasos--valores" aria-labelledby="valores-titulo-eu">
+                <h2 class="lordEyebrow" id="valores-titulo-eu">Gure balioak</h2>
+                <div class="sectLordPasos__grid">
+                    <article class="sectLordPasos__paso" aria-labelledby="valor-producto-eu">
+                        <span class="sectLordPasos__numero" aria-hidden="true">01</span>
+                        <h3 class="sectLordPasos__titulo" id="valor-producto-eu">Produktua</h3>
+                        <p class="sectLordPasos__texto">
+                            Gertuko hornitzaileekin, tokiko haragiarekin eta geuk egindako prestakinekin lan egiten dugu.
+                        </p>
+                    </article>
+                    <article class="sectLordPasos__paso" aria-labelledby="valor-oficio-eu">
+                        <span class="sectLordPasos__numero" aria-hidden="true">02</span>
+                        <h3 class="sectLordPasos__titulo" id="valor-oficio-eu">Ofizioa</h3>
+                        <p class="sectLordPasos__texto">
+                            Eskaera bakoitza unean sukaldatzen dugu eta xehetasuna zaintzen dugu ilara luzea denean ere.
+                        </p>
+                    </article>
+                    <article class="sectLordPasos__paso" aria-labelledby="valor-comunidad-eu">
+                        <span class="sectLordPasos__numero" aria-hidden="true">03</span>
+                        <h3 class="sectLordPasos__titulo" id="valor-comunidad-eu">Komunitatea</h3>
+                        <p class="sectLordPasos__texto">
+                            Kale-sukaldaritza hazten duten merkatu, ekoizle eta proiektuekin elkarlanean aritzen gara.
+                        </p>
+                    </article>
                 </div>
-
-                <article class="art16">
-                    <div>
-                        <h3>Lorem ipsum dolor sit amet</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
-                        </p>
-                        <a href="<?= url("/eu/servicio1") ?>" class="boton" title="Lorem ipsum">Lorem ipsum dolor sit amet</a>
-                    </div>
-                    <div>
-                        <img
-                            src="<?= asset("assets/img/views/matrix-1.webp") ?>"
-                            width="480"
-                            height="207"
-                            alt="Matrix"
-                            title="Lorem ipsum"
-                            loading="lazy"
-                            decoding="async"
-                        />
-                    </div>
-                </article>
-
-                <article class="art16 invert">
-                    <div>
-                        <h3>Lorem ipsum dolor sit amet</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
-                        </p>
-                        <a href="<?= url("/eu/servicio2") ?>" class="boton" title="Lorem ipsum">Lorem ipsum dolor sit amet</a>
-                    </div>
-                    <div>
-                        <img
-                            src="<?= asset("assets/img/views/matrix-2.webp") ?>"
-                            width="480"
-                            height="207"
-                            alt="Matrix"
-                            title="Lorem ipsum"
-                            loading="lazy"
-                            decoding="async"
-                        />
-                    </div>
-                </article>
             </section>
         </main>
 

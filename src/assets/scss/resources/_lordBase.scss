@@ -1,0 +1,241 @@
+@use "config" as c;
+
+// Base del tema THE LORD. Se aplica a body.lord en las vistas y a un div.lord en el showroom.
+// :where() deja la especificidad de los selectores de etiqueta igual que en _config.scss:
+// por orden de carga ganan a _config y cualquier clase de un recurso los sobrescribe.
+
+:where(.lord) {
+    color: c.$lordHueso;
+    font-family: c.$lordFuenteTextos;
+    line-height: 1.5;
+
+    ::selection {
+        background: c.$lordOro;
+        color: c.$lordTinta;
+    }
+}
+
+body.lord {
+    display: block;
+    min-width: 320px;
+    overflow-x: hidden;
+    background:
+        radial-gradient(circle at 80% 30%, rgba(216, 166, 48, 0.035), transparent 28%),
+        c.$lordTinta;
+}
+
+:where(.lord) h1,
+:where(.lord) h2,
+:where(.lord) h3,
+:where(.lord) h4 {
+    width: auto;
+    color: inherit;
+    font-family: c.$lordFuenteTitulos;
+    font-size: inherit;
+    letter-spacing: normal;
+    text-align: inherit;
+}
+
+:where(.lord) p,
+:where(.lord) span,
+:where(.lord) label,
+:where(.lord) a,
+:where(.lord) li,
+:where(.lord) strong,
+:where(.lord) small {
+    color: inherit;
+    font-family: inherit;
+}
+
+:where(.lord) section {
+    display: block;
+    padding: 0;
+    row-gap: normal;
+}
+
+:where(.lord) ul {
+    list-style: none;
+}
+
+:where(.lord) img {
+    display: block;
+    max-width: 100%;
+}
+
+:where(.lord) button {
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+:where(.lord) em {
+    color: c.$lordOro;
+    font-style: normal;
+}
+
+:where(.lord) :focus-visible {
+    outline: 2px solid c.$lordOro;
+    outline-offset: 3px;
+}
+
+// Utilidades del tema.
+.lordOculto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.lordSaltar {
+    position: fixed;
+    z-index: 100;
+    top: 10px;
+    left: 10px;
+    padding: 12px 16px;
+    background: c.$lordOro;
+    color: c.$lordTinta;
+    font-weight: 800;
+    transform: translateY(-150%);
+
+    &:focus {
+        transform: none;
+    }
+}
+
+.lordEyebrow {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    gap: 12px;
+    color: c.$lordOro;
+    font-family: c.$lordFuenteTitulos;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+
+    > span {
+        width: 34px;
+        height: 1px;
+        background: currentColor;
+    }
+}
+
+.lordTitulo {
+    font-family: c.$lordFuenteTitulos;
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -0.055em;
+    text-transform: uppercase;
+
+    @media only screen and (min-width: c.$lordMovil) {
+        font-size: clamp(42px, 5vw, 72px);
+    }
+}
+
+// Icono de flecha y marca rúnica como máscaras: heredan el color del texto.
+.lordFlecha {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    background: currentColor;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M4 10h12m-5-5 5 5-5 5' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+        center / contain no-repeat;
+    transition: transform 180ms ease;
+}
+
+.lordRuna {
+    display: inline-block;
+    width: 39px;
+    aspect-ratio: 68 / 76;
+    flex-shrink: 0;
+    background: c.$lordOro;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 68 76' fill='none'%3E%3Cpath d='M34 4 7 19v31l27 22 27-22V19L34 4Z' stroke='black' stroke-width='2'/%3E%3Cpath d='m18 24 16-9 16 9v20L34 58 18 44V24Z' stroke='black' stroke-width='1.5'/%3E%3Cpath d='M22 27c6 2 8 7 12 14 4-7 6-12 12-14M26 46l8 5 8-5M34 15v36' stroke='black' stroke-width='2'/%3E%3C/svg%3E")
+        center / contain no-repeat;
+}
+
+.lordBoton {
+    display: inline-flex;
+    min-width: 190px;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 17px 22px;
+    background: c.$lordOro;
+    color: c.$lordTinta;
+    font-family: c.$lordFuenteTextos;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    transition:
+        background 180ms ease,
+        transform 180ms ease;
+
+    &:hover {
+        background: c.$lordOroVivo;
+        transform: translateY(-2px);
+    }
+
+    &:hover .lordFlecha {
+        transform: translateX(5px);
+    }
+
+    &--oscuro {
+        background: c.$lordTinta;
+        color: c.$lordOro;
+
+        &:hover {
+            background: c.$lordCarbon;
+        }
+    }
+}
+
+.lordEnlace {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+
+    &:hover .lordFlecha {
+        transform: translateX(5px);
+    }
+}
+
+// Aparición de secciones al hacer scroll. La clase solo se añade con JS.
+.lordReveal {
+    opacity: 0;
+    transform: translateY(34px);
+    transition:
+        opacity 700ms ease,
+        transform 800ms cubic-bezier(0.2, 0.72, 0.2, 1);
+
+    &.is-visible {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :where(.lord) *,
+    :where(.lord) *::before,
+    :where(.lord) *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .lordReveal {
+        opacity: 1;
+        transform: none;
+    }
+}

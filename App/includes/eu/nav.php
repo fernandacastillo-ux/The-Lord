@@ -1,47 +1,50 @@
-<nav class="nav01" aria-label="Nabigazio nagusia" data-nav01>
-    <div class="nav01__inner">
-        <a class="nav01__brand" href="<?= url("/eu") ?>" title="Lorem ipsum">
-            <span class="nav01__logo" aria-hidden="true">S</span>
-            <span class="nav01__brandText">Stack formación</span>
-        </a>
+<a class="lordSaltar" href="#contenido">Edukira joan</a>
+<div class="navLord" data-nav-lord>
+    <span class="navLord__progreso" aria-hidden="true" data-nav-lord-progreso></span>
 
-        <button
-            class="nav01__toggle"
-            type="button"
-            aria-controls="nav01-menu-eu"
-            aria-expanded="false"
-            aria-label="Menua ireki"
-            title="Lorem ipsum"
-            data-nav01-toggle
-            data-nav01-label-open="Menua ireki"
-            data-nav01-label-close="Menua itxi"
-        >
-            <span class="nav01__toggleLine"></span>
-            <span class="nav01__toggleLine"></span>
-            <span class="nav01__toggleLine"></span>
-        </button>
+    <a class="navLord__marca" href="<?= url("/eu") ?>" title="THE LORDen hasierara joan">
+        <span class="lordRuna" aria-hidden="true"></span>
+        <span class="navLord__textos">
+            <strong>THE LORD</strong>
+            <small>Sukaldaritza gurpilen gainean</small>
+        </span>
+    </a>
 
-        <div class="nav01__panel" id="nav01-menu-eu" data-nav01-menu>
-            <div class="nav01__panelInner">
-                <?php
-                $idSubmenu = "nav-zerbitzuak-eu";
-                require app_path("includes/eu/enlaces.php");
-                ?>
+    <button
+        class="navLord__toggle"
+        type="button"
+        aria-controls="navLord-menu-eu"
+        aria-expanded="false"
+        aria-label="Menua ireki"
+        data-nav-lord-toggle
+        data-label-abrir="Menua ireki"
+        data-label-cerrar="Menua itxi"
+    >
+        <span></span>
+        <span></span>
+    </button>
 
-                <div class="nav01__langs" aria-label="Hizkuntzak">
-                    <a class="nav01__lang" href="<?= url(ruta_homologa($url ?? null, "es")) ?>" lang="es" hreflang="es" title="Lorem ipsum">ES</a>
+    <nav class="navLord__menu" id="navLord-menu-eu" aria-label="Nabigazio nagusia" data-nav-lord-menu>
+        <?php require app_path("includes/eu/enlaces.php"); ?>
 
-                    <a
-                        class="nav01__lang is-active"
-                        href="<?= url(ruta_homologa($url ?? null, "eu")) ?>"
-                        lang="eu"
-                        hreflang="eu"
-                        aria-current="true"
-                        title="Lorem ipsum"
-                        >EU</a
-                    >
-                </div>
-            </div>
+        <div class="navLord__idiomas" role="group" aria-label="Hizkuntza">
+            <a
+                class="navLord__idioma"
+                href="<?= url(ruta_homologa($url ?? null, "es")) ?>"
+                lang="es"
+                hreflang="es"
+                title="Ver esta página en castellano"
+                >ES</a
+            >
+            <a
+                class="navLord__idioma"
+                href="<?= url(ruta_homologa($url ?? null, "eu")) ?>"
+                lang="eu"
+                hreflang="eu"
+                aria-current="true"
+                title="Orri hau euskaraz ikusi"
+                >EU</a
+            >
         </div>
-    </div>
-</nav>
+    </nav>
+</div>

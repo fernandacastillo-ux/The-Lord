@@ -1,0 +1,22 @@
+Fotografías de Unsplash (licencia Unsplash) usadas en el diseño Figma Make
+"Foodtruck Vikingo de Hamburguesas". Descargadas en WebP desde images.unsplash.com.
+
+hero-1.webp: photo-1616645500344-209060c84970
+hero-2.webp, ragnarok.webp: photo-1499028344343-cd173ffc68a9
+hero-3.webp, cabecera-quienes-somos.webp: photo-1551782450-a2132b4ba21d
+parrilla-1.webp: photo-1627947063935-55577ec3c2e1
+parrilla-2.webp: photo-1558030137-a56c1b004fa3
+parrilla-3.webp: photo-1586058584825-c1e87ed735b4
+berserker.webp, foodtruck.webp: photo-1550547660-d9450f859349
+freya.webp: photo-1590742309630-e9f9b66da3f7
+jarl.webp, cabecera-contacto.webp: photo-1600688640154-9619e002df30
+lagertha.webp: photo-1596662951482-0c4ba74a6df6
+odin.webp: photo-1611077854917-291673c6ae06
+extras.webp: photo-1644447295446-19b7e712a895
+cabecera-ruta.webp: photo-1772920908850-75f9c051fc2a
+festival-catoira.webp: photo-1657832004003-95c5974ac53d
+festival-avila.webp: photo-1785095953033-37b5aa623582
+festival-clan.webp: photo-1691999573468-2e7788dc0fb7
+taberna.webp: photo-1722257286921-1ee1c3e6c820
+
+avatar-1.svg a avatar-6.svg: ilustraciones del propio diseño Figma Make.

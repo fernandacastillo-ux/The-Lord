@@ -1,0 +1,111 @@
+@use "config" as c;
+
+// Sección de declaración: número de sección, título grande y texto con tres datos destacados.
+.sectLordManifiesto {
+    position: relative;
+    display: block;
+    max-width: c.$lordAncho;
+    margin: 0 auto;
+    padding: 90px c.$lordMargen;
+
+    @media only screen and (min-width: c.$lordMovil) {
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        gap: 50px;
+        padding: 100px 24px;
+    }
+
+    @media only screen and (min-width: c.$lordTablet) {
+        grid-template-columns: 90px 1fr 0.85fr;
+        padding: 145px 24px;
+    }
+
+    &__numero {
+        display: flex;
+        margin-bottom: 25px;
+        align-items: flex-start;
+        gap: 10px;
+        color: c.$lordOro;
+        font-family: c.$lordFuenteTitulos;
+        font-size: 11px;
+
+        span {
+            display: block;
+            width: 50px;
+            height: 1px;
+            margin-top: 7px;
+            background: c.$lordOro;
+
+            @media only screen and (min-width: c.$lordMovil) {
+                width: 1px;
+                height: 74px;
+                margin-top: 0;
+                background: linear-gradient(c.$lordOro, transparent);
+            }
+        }
+    }
+
+    &__texto {
+        padding-top: 30px;
+
+        @media only screen and (min-width: c.$lordMovil) {
+            grid-column: 2;
+        }
+
+        @media only screen and (min-width: c.$lordTablet) {
+            grid-column: auto;
+            padding-top: 41px;
+        }
+
+        > p {
+            color: c.$lordApagado;
+            line-height: 1.75;
+        }
+    }
+
+    &__lead {
+        margin-bottom: 17px;
+        color: c.$lordHueso !important;
+        font-family: c.$lordFuenteTitulos;
+        font-size: 19px;
+
+        strong {
+            color: c.$lordOro;
+        }
+    }
+
+    &__datos {
+        display: grid;
+        margin-top: 40px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        border-top: 1px solid rgba(240, 234, 220, 0.12);
+        padding-top: 26px;
+
+        @media only screen and (min-width: c.$lordMovil) {
+            gap: 20px;
+        }
+
+        strong,
+        span {
+            display: block;
+        }
+
+        strong {
+            color: c.$lordOro;
+            font-family: c.$lordFuenteTitulos;
+            font-size: 20px;
+
+            @media only screen and (min-width: c.$lordMovil) {
+                font-size: 25px;
+            }
+        }
+
+        span {
+            margin-top: 4px;
+            color: c.$lordApagado;
+            font-size: 10px;
+            text-transform: uppercase;
+        }
+    }
+}

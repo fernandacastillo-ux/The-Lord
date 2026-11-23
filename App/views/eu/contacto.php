@@ -2,388 +2,206 @@
 <html lang="eu">
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/svg+xml" href="<?= asset("favicon.svg") ?>" />
-        <link rel="canonical" href="<?= e(app_url("/eu/contacto")) ?>" />
+        <link rel="canonical" href="<?= e(app_url("/eu/harremanetan")) ?>" />
         <link rel="alternate" hreflang="es" href="<?= e(app_url("/es/contacto")) ?>" />
-        <link rel="alternate" hreflang="eu" href="<?= e(app_url("/eu/contacto")) ?>" />
+        <link rel="alternate" hreflang="eu" href="<?= e(app_url("/eu/harremanetan")) ?>" />
         <link rel="alternate" hreflang="x-default" href="<?= e(app_url("/es/contacto")) ?>" />
-        <title>Kontaktua | Stack formación</title>
-        <meta name="description" content="Lorem ipsum dolor sit amet" />
+        <title>Harremanetan: kontratatu foodtrucka zure ekitaldirako | THE LORD</title>
+        <meta
+            name="description"
+            content="Ezteiak, jaialdia edo enpresa-topaketa? Kontaiguzu data, lekua eta bertaratu kopurua, eta THE LORD eramango dugu zure ekitaldira, Madrilen edo Espainia osoan."
+        />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="eu_ES" />
-        <meta property="og:site_name" content="Lorem ipsum dolor sit amet" />
-        <meta property="og:title" content="Lorem ipsum dolor sit amet" />
-        <meta property="og:description" content="Lorem ipsum dolor sit amet" />
-        <meta property="og:url" content="<?= e(app_url("/eu/contacto")) ?>" />
-        <meta property="og:image" content="<?= e(app_url("assets/img/views/matrix-2.webp")) ?>" />
+        <meta property="og:site_name" content="THE LORD" />
+        <meta property="og:title" content="Harremanetan: kontratatu foodtrucka zure ekitaldirako | THE LORD" />
+        <meta
+            property="og:description"
+            content="Ezteiak, jaialdia edo enpresa-topaketa? Kontaiguzu data, lekua eta bertaratu kopurua, eta THE LORD eramango dugu zure ekitaldira, Madrilen edo Espainia osoan."
+        />
+        <meta property="og:url" content="<?= e(app_url("/eu/harremanetan")) ?>" />
+        <meta property="og:image" content="<?= e(app_url("assets/img/thelord/cabecera-contacto.webp")) ?>" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Lorem ipsum dolor sit amet" />
-        <meta name="twitter:description" content="Lorem ipsum dolor sit amet" />
-        <meta name="twitter:image" content="<?= e(app_url("assets/img/views/matrix-2.webp")) ?>" />
+        <meta name="twitter:title" content="Harremanetan: kontratatu foodtrucka zure ekitaldirako | THE LORD" />
+        <meta
+            name="twitter:description"
+            content="Ezteiak, jaialdia edo enpresa-topaketa? Kontaiguzu data, lekua eta bertaratu kopurua, eta THE LORD eramango dugu zure ekitaldira, Madrilen edo Espainia osoan."
+        />
+        <meta name="twitter:image" content="<?= e(app_url("assets/img/thelord/cabecera-contacto.webp")) ?>" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap"
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <?= vite_tags($route["resources"] ?? null) ?>
         <?php require app_path("includes/cookielad.php"); ?>
     </head>
-    <body>
+    <body class="lord">
         <?php require app_path("includes/eu/nav.php"); ?>
 
-        <header class="header02">
+        <header class="headerLord">
             <img
-                class="header02__media"
-                src="<?= asset("assets/img/views/matrix-2.webp") ?>"
-                width="480"
-                height="207"
-                alt="Matrix"
-                title="Lorem ipsum"
+                class="headerLord__fondo"
+                src="<?= asset("assets/img/thelord/cabecera-contacto.webp") ?>"
+                width="1800"
+                height="1000"
+                alt=""
                 fetchpriority="high"
                 decoding="async"
             />
-            <div class="header02__content">
-                <p class="header02__eyebrow">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.
+            <div class="headerLord__contenido">
+                <p class="lordEyebrow">Hitz egin dezagun</p>
+                <h1 class="headerLord__titulo">Zure hurrengo<br /><em>oturuntzan egon nahi dugu.</em></h1>
+                <p class="headerLord__texto">
+                    Ekitaldiak, jaialdiak, ospakizunak edo edozein zalantza. Kontaiguzu zure ideia eta elkarrizketa
+                    hasiko dugu.
                 </p>
-                <h1 class="header02__title">Kontaktua</h1>
-                <p class="header02__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.
-                </p>
-                <a href="#formulario-contacto-eu" class="boton" title="Lorem ipsum">Lorem ipsum dolor sit amet</a>
             </div>
         </header>
 
-        <main>
-            <section aria-labelledby="contacto-preparar-eu">
-                <article class="art03">
-                    <div class="h2Especial">
-                        <span aria-hidden="true"></span>
-                        <h2 id="contacto-preparar-eu">Lorem ipsum dolor sit amet</h2>
-                    </div>
+        <main id="contenido">
+            <section class="sectLordContacto" aria-labelledby="contacto-titulo-eu">
+                <div class="sectLordContacto__detalles">
+                    <p class="lordEyebrow">Harreman zuzena</p>
+                    <h2 class="lordTitulo" id="contacto-titulo-eu">Eman lehen<br /><em>urratsa.</em></h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
+                        Normalean 24 ordu baino lehen erantzuten dugu. Zure kontsulta presazkoa bada, zuzenean dei
+                        diezagukezu.
                     </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
-                    </p>
-                    <img
-                        src="<?= asset("assets/img/views/matrix-5.webp") ?>"
-                        width="480"
-                        height="207"
-                        alt="Matrix"
-                        title="Lorem ipsum"
-                        loading="lazy"
-                        decoding="async"
-                    />
-                </article>
-            </section>
-
-            <section aria-labelledby="contacto-informacion-eu">
-                <div class="h2Especial">
-                    <span aria-hidden="true"></span>
-                    <h2 id="contacto-informacion-eu">Lorem ipsum dolor sit amet</h2>
+                    <dl>
+                        <div class="sectLordContacto__dato">
+                            <dt>Posta elektronikoa</dt>
+                            <dd><a href="mailto:hola@thelord.es" title="THE LORDi mezu elektroniko bat idatzi">hola@thelord.es</a></dd>
+                        </div>
+                        <div class="sectLordContacto__dato">
+                            <dt>Telefonoa</dt>
+                            <dd><a href="tel:+34612034567" title="THE LORDi deitu">+34 612 034 567</a></dd>
+                        </div>
+                        <div class="sectLordContacto__dato">
+                            <dt>Zerbitzu-eremua</dt>
+                            <dd>Madril eta Espainia osoa</dd>
+                        </div>
+                    </dl>
                 </div>
-                <article class="art09">
-                    <h3>Lorem ipsum dolor sit amet</h3>
-                    <div class="art09-content">
-                        <div class="contenedor-lista">
-                            <h4>Lorem ipsum dolor sit amet</h4>
-                            <ul>
-                                <li>
-                                    <img src="<?= asset("assets/img/icons/checkmark-circle.svg") ?>" alt="" title="" aria-hidden="true" /><span
-                                        >Lorem ipsum dolor sit amet</span
-                                    >
-                                </li>
-                                <li>
-                                    <img src="<?= asset("assets/img/icons/checkmark-circle.svg") ?>" alt="" title="" aria-hidden="true" /><span
-                                        >Lorem ipsum dolor sit amet</span
-                                    >
-                                </li>
-                                <li>
-                                    <img src="<?= asset("assets/img/icons/checkmark-circle.svg") ?>" alt="" title="" aria-hidden="true" /><span
-                                        >Lorem ipsum dolor sit amet</span
-                                    >
-                                </li>
-                                <li>
-                                    <img src="<?= asset("assets/img/icons/checkmark-circle.svg") ?>" alt="" title="" aria-hidden="true" /><span
-                                        >Lorem ipsum dolor sit amet</span
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="contenedor-lista">
-                            <h4>Lorem ipsum dolor sit amet</h4>
-                            <ul>
-                                <li>
-                                    <img src="<?= asset("assets/img/icons/checkmark-circle.svg") ?>" alt="" title="" aria-hidden="true" /><span
-                                        >Lorem ipsum dolor sit amet</span
-                                    >
-                                </li>
-                                <li>
-                                    <img src="<?= asset("assets/img/icons/checkmark-circle.svg") ?>" alt="" title="" aria-hidden="true" /><span
-                                        >Lorem ipsum dolor sit amet</span
-                                    >
-                                </li>
-                                <li>
-                                    <img src="<?= asset("assets/img/icons/checkmark-circle.svg") ?>" alt="" title="" aria-hidden="true" /><span
-                                        >Lorem ipsum dolor sit amet</span
-                                    >
-                                </li>
-                                <li>
-                                    <img src="<?= asset("assets/img/icons/checkmark-circle.svg") ?>" alt="" title="" aria-hidden="true" /><span
-                                        >Lorem ipsum dolor sit amet</span
-                                    >
-                                </li>
-                            </ul>
-                        </div>
+
+                <div class="sectLordContacto__formulario">
+                    <div id="modal_envio" aria-live="polite">
+                        <h3 id="h3_modal_envio">Kontsulta bidali da</h3>
+                        <p id="p_modal_envio">Zure mezua behar bezala jaso dugu.</p>
+                        <button class="lordBoton" type="button" id="boton_modal_envio">Beste kontsulta bat idatzi</button>
                     </div>
-                </article>
-            </section>
 
-            <section aria-labelledby="contacto-faq-eu">
-                <div class="h2Especial">
-                    <span aria-hidden="true"></span>
-                    <h2 id="contacto-faq-eu">Lorem ipsum dolor sit amet</h2>
-                </div>
-                <article class="artAcordeon01">
-                    <div class="cabecera">
-                        <div>
-                            <h3>Lorem ipsum dolor sit amet</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.
-                            </p>
-                        </div>
-                        <img
-                            src="<?= asset("assets/img/views/matrix-4.webp") ?>"
-                            width="480"
-                            height="207"
-                            alt="Matrix"
-                            title="Lorem ipsum"
-                            loading="lazy"
-                            decoding="async"
-                        />
-                    </div>
-                    <div class="contenedor">
-                        <div class="ficha">
-                            <h4>Lorem ipsum dolor sit amet</h4>
-                            <p class="respuesta">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.
-                            </p>
-                            <span class="mostrar boton" role="button" tabindex="0">Lorem ipsum dolor sit amet</span>
-                        </div>
-                        <div class="ficha">
-                            <h4>Lorem ipsum dolor sit amet</h4>
-                            <p class="respuesta">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.
-                            </p>
-                            <span class="mostrar boton" role="button" tabindex="0">Lorem ipsum dolor sit amet</span>
-                        </div>
-                        <div class="ficha">
-                            <h4>Lorem ipsum dolor sit amet</h4>
-                            <p class="respuesta">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.
-                            </p>
-                            <span class="mostrar boton" role="button" tabindex="0">Lorem ipsum dolor sit amet</span>
-                        </div>
-                        <div class="ficha">
-                            <h4>Lorem ipsum dolor sit amet</h4>
-                            <p class="respuesta">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.
-                            </p>
-                            <span class="mostrar boton" role="button" tabindex="0">Lorem ipsum dolor sit amet</span>
-                        </div>
-                        <div class="ficha">
-                            <h4>Lorem ipsum dolor sit amet</h4>
-                            <p class="respuesta">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.
-                            </p>
-                            <span class="mostrar boton" role="button" tabindex="0">Lorem ipsum dolor sit amet</span>
-                        </div>
-                        <div class="ficha">
-                            <h4>Lorem ipsum dolor sit amet</h4>
-                            <p class="respuesta">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.
-                            </p>
-                            <span class="mostrar boton" role="button" tabindex="0">Lorem ipsum dolor sit amet</span>
-                        </div>
-                    </div>
-                </article>
-            </section>
+                    <form id="idForAjax" action="<?= e(app_url("/app/artForm02")) ?>" method="post" aria-label="Harremanetarako formularioa">
+                        <p class="error" id="errorForm02" aria-live="assertive"></p>
 
-            <section id="formulario-contacto-eu" aria-labelledby="contacto-formulario-eu">
-                <article class="artForm02">
-                    <h2 id="contacto-formulario-eu">Lorem ipsum dolor sit amet</h2>
-                    <div>
-                        <div class="contenedor-form">
-                            <img src="<?= asset("assets/img/icons/mail-solid.svg") ?>" alt="" title="" aria-hidden="true" />
-
-                            <div id="modal_envio" aria-live="polite">
-                                <h3 id="h3_modal_envio">Kontsulta bidalita</h3>
-                                <p id="p_modal_envio">Zure mezua behar bezala jaso dugu.</p>
-                                <div class="boton" id="boton_modal_envio" role="button" tabindex="0">
-                                    Beste kontsulta bat idatzi
-                                </div>
-                            </div>
-
-                            <form id="idForAjax" action="<?= e(app_url("/app/artForm02")) ?>" method="post" aria-label="Formulario">
-                                <p class="error" id="errorForm02" aria-live="assertive"></p>
-
-                                <label for="nombreAjax">Izena *</label>
+                        <div class="sectLordContacto__fila">
+                            <div>
+                                <label for="nombreAjax">Izen-abizenak *</label>
                                 <input
                                     type="text"
                                     id="nombreAjax"
                                     name="nombre"
-                                    placeholder="Lorem ipsum"
+                                    placeholder="Zure izena"
                                     minlength="3"
                                     maxlength="40"
                                     autocomplete="name"
                                     required
                                 />
-
-                                <label for="telefonoAjax">Telefonoa *</label>
-                                <input
-                                    type="tel"
-                                    id="telefonoAjax"
-                                    name="telefono"
-                                    placeholder="Lorem ipsum"
-                                    autocomplete="tel"
-                                    required
-                                />
-
+                            </div>
+                            <div>
                                 <label for="emailAjax">Helbide elektronikoa *</label>
                                 <input
                                     type="email"
                                     id="emailAjax"
                                     name="email"
-                                    placeholder="Lorem ipsum"
+                                    placeholder="zu@posta.eus"
                                     autocomplete="email"
                                     required
                                 />
-
-                                <label for="mensajeAjax">Zer lan behar duzu? *</label>
-                                <textarea
-                                    name="mensaje"
-                                    id="mensajeAjax"
-                                    placeholder="Lorem ipsum"
-                                    minlength="4"
-                                    maxlength="200"
-                                    required
-                                ></textarea>
-
-                                <div class="horizontal">
-                                    <label for="terminosAjax" id="consentimiento"
-                                        >Proba-datuak bidaltzea onartzen dut *</label
-                                    >
-                                    <input type="checkbox" name="terminos" id="terminosAjax" required />
-                                </div>
-
-                                <label for="respuestaajax">Ebatzi eragiketa hau *</label>
-                                <div class="horizontal">
-                                    <span id="num1ajax"></span>
-                                    <span id="operadorajax"></span>
-                                    <span id="num2ajax"></span>
-                                    <input
-                                        type="text"
-                                        name="respUser"
-                                        id="respuestaajax"
-                                        placeholder="Lorem ipsum"
-                                        inputmode="numeric"
-                                        autocomplete="off"
-                                        required
-                                    />
-                                    <input type="hidden" name="respSystem" id="respSystemajax" value="" />
-                                </div>
-
-                                <input type="hidden" name="url" value="<?= e($url) ?>" />
-                                <input type="hidden" name="lang" value="<?= e($lang) ?>" />
-                                <input
-                                    type="submit"
-                                    class="boton"
-                                    value="Kontsulta bidali"
-                                    id="botonEnviarAjax"
-                                    title="Lorem ipsum"
-                                />
-                            </form>
-
-                            <div
-                                class="moduloLoader01"
-                                id="moduloLoader01"
-                                role="status"
-                                aria-label="Kontsulta bidaltzen"
-                            >
-                                <svg viewBox="0 0 50 50" aria-hidden="true">
-                                    <circle
-                                        cx="25"
-                                        cy="25"
-                                        r="20"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="5"
-                                        stroke-linecap="round"
-                                        stroke-dasharray="90 40"
-                                    >
-                                        <animateTransform
-                                            attributeName="transform"
-                                            type="rotate"
-                                            from="0 25 25"
-                                            to="360 25 25"
-                                            dur="1s"
-                                            repeatCount="indefinite"
-                                        />
-                                    </circle>
-                                </svg>
                             </div>
                         </div>
 
-                        <div class="contenedor-info">
-                            <h3>Lorem ipsum dolor sit amet</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.
-                            </p>
-                            <ul>
-                                <li>
-                                    <a href="<?= url("/eu/servicio1") ?>" title="Lorem ipsum">
-                                        <img src="<?= asset("assets/img/icons/grid.svg") ?>" alt="" title="" aria-hidden="true" />
-                                        <span>Lorem ipsum dolor sit amet</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="<?= url("/eu/servicio2") ?>" title="Lorem ipsum">
-                                        <img src="<?= asset("assets/img/icons/boxes.svg") ?>" alt="" title="" aria-hidden="true" />
-                                        <span>Lorem ipsum dolor sit amet</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="<?= url("/eu/quienessomos") ?>" title="Lorem ipsum">
-                                        <img src="<?= asset("assets/img/icons/person.svg") ?>" alt="" title="" aria-hidden="true" />
-                                        <span>Lorem ipsum dolor sit amet</span>
-                                    </a>
-                                </li>
-                            </ul>
+                        <label for="telefonoAjax">Telefonoa *</label>
+                        <input
+                            type="tel"
+                            id="telefonoAjax"
+                            name="telefono"
+                            placeholder="+34 600 000 000"
+                            autocomplete="tel"
+                            required
+                        />
+
+                        <label for="mensajeAjax">Kontaiguzu zure ideia *</label>
+                        <textarea
+                            id="mensajeAjax"
+                            name="mensaje"
+                            rows="7"
+                            placeholder="Data, lekua, pertsona kopurua eta jakin behar dugun guztia..."
+                            minlength="4"
+                            maxlength="200"
+                            required
+                        ></textarea>
+
+                        <div class="sectLordContacto__check">
+                            <input type="checkbox" id="terminosAjax" name="terminos" required />
+                            <label for="terminosAjax">
+                                Onartzen dut THE LORDek datu hauek nire kontsultari erantzuteko erabiltzea. *
+                            </label>
                         </div>
+
+                        <label for="respuestaajax">Ebatzi eragiketa hau *</label>
+                        <div class="sectLordContacto__captcha">
+                            <span id="num1ajax"></span>
+                            <span id="operadorajax"></span>
+                            <span id="num2ajax"></span>
+                            <span aria-hidden="true">=</span>
+                            <input
+                                type="text"
+                                id="respuestaajax"
+                                name="respUser"
+                                inputmode="numeric"
+                                autocomplete="off"
+                                required
+                            />
+                            <input type="hidden" name="respSystem" id="respSystemajax" value="" />
+                        </div>
+
+                        <input type="hidden" name="url" value="<?= e($url) ?>" />
+                        <input type="hidden" name="lang" value="<?= e($lang) ?>" />
+
+                        <button class="lordBoton sectLordContacto__enviar" type="submit" id="botonEnviarAjax">
+                            Kontsulta bidali <span class="lordFlecha" aria-hidden="true"></span>
+                        </button>
+                    </form>
+
+                    <div class="moduloLoader01" id="moduloLoader01" role="status" aria-label="Kontsulta bidaltzen">
+                        <svg viewBox="0 0 50 50" aria-hidden="true">
+                            <circle
+                                cx="25"
+                                cy="25"
+                                r="20"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="5"
+                                stroke-linecap="round"
+                                stroke-dasharray="90 40"
+                            >
+                                <animateTransform
+                                    attributeName="transform"
+                                    type="rotate"
+                                    from="0 25 25"
+                                    to="360 25 25"
+                                    dur="1s"
+                                    repeatCount="indefinite"
+                                />
+                            </circle>
+                        </svg>
                     </div>
-                </article>
+                </div>
             </section>
         </main>
 

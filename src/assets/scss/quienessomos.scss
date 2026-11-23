@@ -1,12 +1,7 @@
 @use "./resources/config" as c;
 @use "./resources/global";
 
-@use "./resources/header02";
-@use "./resources/art09";
-@use "./resources/art14";
-@use "./resources/art16";
-@use "./resources/art13";
-
-.art14 .content > h3 {
-    font-size: clamp(1.3rem, 2.5vw, 2rem);
-}
+@use "./resources/headerLord";
+@use "./resources/sectLordHistoria";
+@use "./resources/sectLordSplit";
+@use "./resources/sectLordPasos";
