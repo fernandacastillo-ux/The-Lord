@@ -11,7 +11,7 @@
         <meta name="description" content="Lorem ipsum dolor sit amet" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
-        <meta property="og:locale" content="es_ES" />
+        <meta property="og:locale" content="es_ES" />     
         <meta property="og:site_name" content="Lorem ipsum dolor sit amet" />
         <meta property="og:title" content="Lorem ipsum dolor sit amet" />
         <meta property="og:description" content="Lorem ipsum dolor sit amet" />
@@ -42,7 +42,7 @@
                 width="480"
                 height="207"
                 alt="Matrix"
-                title="Lorem ipsum"
+                title="Lorem ipsum"   
                 fetchpriority="high"
                 decoding="async"
             />
