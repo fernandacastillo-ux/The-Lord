@@ -2,6 +2,11 @@
 
 Este repositorio enseña HTML, SCSS, JavaScript y PHP con vistas y rutas explícitas. Mantener su sencillez: no introducir frameworks, componentes generados, capas MVC adicionales ni refactorizaciones generales sin que la tarea lo pida.
 
+
+
+# no generes ramas en el proyecto. trabaja sobre la que esté el usuario: la main.
+
+
 ## Skills del proyecto
 
 Leer la skill aplicable antes de realizar el trabajo:
