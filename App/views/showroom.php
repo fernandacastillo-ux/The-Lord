@@ -1488,6 +1488,34 @@
                         </dl>
                     </div>
                 </section>
+
+                <p class="showroomLord__rotulo">sectLordLegal (aviso legal, privacidad y cookies)</p>
+                <section class="sectLordLegal" aria-labelledby="sr-legal">
+                    <h2 class="sectLordLegal__titulo" id="sr-legal">Lorem ipsum dolor</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#sr-legal" title="Enlace de ejemplo">Lorem ipsum</a>.</p>
+                    <dl class="sectLordLegal__datos">
+                        <div><dt>Lorem</dt><dd>Ipsum dolor sit amet</dd></div>
+                        <div><dt>Consectetur</dt><dd>Adipiscing elit</dd></div>
+                    </dl>
+                    <article class="sectLordLegal__articulo" aria-labelledby="sr-legal-1">
+                        <h3 class="sectLordLegal__subtitulo" id="sr-legal-1">Lorem ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <ul>
+                            <li>Lorem ipsum dolor.</li>
+                            <li>Sit amet consectetur.</li>
+                        </ul>
+                    </article>
+                    <article class="sectLordLegal__articulo" aria-labelledby="sr-legal-2">
+                        <h3 class="sectLordLegal__subtitulo" id="sr-legal-2">Dolor sit amet</h3>
+                        <div class="sectLordLegal__tabla">
+                            <table>
+                                <thead><tr><th scope="col">Lorem</th><th scope="col">Ipsum</th><th scope="col">Dolor</th></tr></thead>
+                                <tbody><tr><td>Lorem ipsum</td><td>Dolor</td><td>Sit amet consectetur adipiscing elit.</td></tr></tbody>
+                            </table>
+                        </div>
+                        <p class="sectLordLegal__actualizado">Lorem ipsum: 2026.</p>
+                    </article>
+                </section>
             </div>
         </main>
 

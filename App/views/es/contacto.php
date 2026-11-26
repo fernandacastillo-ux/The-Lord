@@ -149,7 +149,10 @@
                         <div class="sectLordContacto__check">
                             <input type="checkbox" id="terminosAjax" name="terminos" required />
                             <label for="terminosAjax">
-                                Acepto que THE LORD utilice estos datos para responder a mi consulta. *
+                                He leído y acepto la
+                                <a href="<?= url("/es/politica-privacidad") ?>" title="Leer la política de privacidad (se abre en una pestaña nueva)" target="_blank" rel="noopener">política de privacidad</a>
+                                y el <a href="<?= url("/es/aviso-legal") ?>" title="Leer el aviso legal (se abre en una pestaña nueva)" target="_blank" rel="noopener">aviso legal</a>,
+                                y que THE LORD utilice estos datos para responder a mi consulta. *
                             </label>
                         </div>
 

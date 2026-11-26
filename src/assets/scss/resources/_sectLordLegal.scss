@@ -1,0 +1,134 @@
+@use "config" as c;
+
+// Texto legal: sección con H2 y artículos con H3, a una columna de lectura cómoda.
+// Se usa en aviso legal, política de privacidad y gestión de cookies.
+.sectLordLegal {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 70px c.$lordMargen;
+    border-bottom: 1px solid c.$lordLinea;
+
+    @media only screen and (min-width: c.$lordMovil) {
+        padding: 100px 24px;
+    }
+
+    &__titulo {
+        margin-bottom: 26px;
+        color: c.$lordHueso;
+        font-family: c.$lordFuenteTitulos;
+        font-size: 28px;
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+
+        @media only screen and (min-width: c.$lordMovil) {
+            font-size: 36px;
+        }
+    }
+
+    &__articulo {
+        margin-top: 34px;
+    }
+
+    &__subtitulo {
+        margin-bottom: 12px;
+        color: c.$lordOro;
+        font-family: c.$lordFuenteTitulos;
+        font-size: 17px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+    }
+
+    p,
+    li,
+    dd,
+    dt {
+        color: c.$lordApagado;
+        font-family: c.$lordFuenteTextos;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    p + p {
+        margin-top: 14px;
+    }
+
+    ul {
+        margin: 12px 0 0 20px;
+    }
+
+    li + li {
+        margin-top: 6px;
+    }
+
+    strong,
+    dt {
+        color: c.$lordHueso;
+        font-weight: 700;
+    }
+
+    a {
+        color: c.$lordOro;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+
+        &:hover,
+        &:focus-visible {
+            color: c.$lordOroVivo;
+        }
+    }
+
+    &__datos {
+        display: grid;
+        margin-top: 18px;
+        border-top: 1px solid c.$lordLinea;
+
+        > div {
+            display: grid;
+            gap: 2px;
+            padding: 12px 0;
+            border-bottom: 1px solid c.$lordLinea;
+
+            @media only screen and (min-width: c.$lordMovil) {
+                grid-template-columns: 220px 1fr;
+                gap: 20px;
+            }
+        }
+    }
+
+    &__tabla {
+        width: 100%;
+        margin-top: 18px;
+        overflow-x: auto;
+
+        table {
+            width: 100%;
+            min-width: 560px;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 12px 10px;
+            border-bottom: 1px solid c.$lordLinea;
+            color: c.$lordApagado;
+            font-family: c.$lordFuenteTextos;
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            color: c.$lordHueso;
+            font-weight: 700;
+        }
+    }
+
+    p.sectLordLegal__actualizado {
+        margin-top: 34px;
+        font-size: 13px;
+        font-style: italic;
+    }
+}

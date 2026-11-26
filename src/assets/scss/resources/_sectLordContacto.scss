@@ -133,6 +133,18 @@
             letter-spacing: 0.03em;
             line-height: 1.5;
             text-transform: none;
+
+            a {
+                color: c.$lordOxido;
+                font-weight: 700;
+                text-decoration: underline;
+                text-underline-offset: 2px;
+
+                &:hover,
+                &:focus-visible {
+                    color: c.$lordOxidoOscuro;
+                }
+            }
         }
     }
 

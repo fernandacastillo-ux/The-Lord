@@ -22,6 +22,7 @@ export default defineConfig({
                 quienessomos: resolvePath("./src/assets/js/quienessomos.js"),
                 ruta: resolvePath("./src/assets/js/ruta.js"),
                 contacto: resolvePath("./src/assets/js/contacto.js"),
+                legal: resolvePath("./src/assets/js/legal.js"),
                 404: resolvePath("./src/assets/js/404.js"),
                 showroom: resolvePath("./src/assets/js/showroom.js"),
             },

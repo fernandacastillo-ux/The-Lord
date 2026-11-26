@@ -77,6 +77,31 @@
         }
     }
 
+    // Enlaces legales: fila discreta entre la navegación y la base.
+    &__legal ul {
+        display: flex;
+        margin-bottom: 28px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 26px;
+    }
+
+    &__legal a {
+        color: c.$lordApagado;
+        font-size: 10px;
+        letter-spacing: 0.08em;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        text-transform: uppercase;
+        transition: color 180ms ease;
+
+        &:hover,
+        &:focus-visible,
+        &[aria-current="page"] {
+            color: c.$lordOro;
+        }
+    }
+
     &__base {
         display: flex;
         flex-direction: column;

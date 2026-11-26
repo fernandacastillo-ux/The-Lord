@@ -149,7 +149,9 @@
                         <div class="sectLordContacto__check">
                             <input type="checkbox" id="terminosAjax" name="terminos" required />
                             <label for="terminosAjax">
-                                Onartzen dut THE LORDek datu hauek nire kontsultari erantzuteko erabiltzea. *
+                                <a href="<?= url("/eu/pribatutasun-politika") ?>" title="Pribatutasun-politika irakurri (fitxa berri batean irekitzen da)" target="_blank" rel="noopener">Pribatutasun-politika</a>
+                                eta <a href="<?= url("/eu/lege-oharra") ?>" title="Lege-oharra irakurri (fitxa berri batean irekitzen da)" target="_blank" rel="noopener">lege-oharra</a>
+                                irakurri eta onartzen ditut, baita THE LORDek datu hauek nire kontsultari erantzuteko erabiltzea ere. *
                             </label>
                         </div>
 
